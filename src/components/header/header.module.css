@@ -1,0 +1,15 @@
+.wrap {
+  background-color: var(--background-support-color);
+  @apply w-full;
+}
+
+.header {
+  @apply py-6 px-[70px] my-0 mx-auto;
+  max-width: 1920px;
+}
+
+.header__btn {
+  @apply flex gap-1;
+  @apply p-2;
+  background-color: var(--main-color);
+}
