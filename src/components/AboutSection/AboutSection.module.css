@@ -1,0 +1,31 @@
+.about {
+  @apply flex justify-between gap-5;
+}
+
+.reverse {
+  @apply flex-row-reverse;
+}
+
+.about__left,
+.about__right {
+  width: calc(50% - 20px);
+  @apply rounded-2xl;
+}
+
+.about__right {
+  @apply bg-no-repeat bg-cover;
+}
+
+.about__quote {
+  @apply text-[22px] font-medium text-[var(--main-color)];
+  @apply mb-4;
+}
+
+.about__description {
+  @apply text-lg;
+  @apply mb-2;
+}
+
+.about__link {
+  @apply text-base font-medium text-[var(--main-color)];
+}

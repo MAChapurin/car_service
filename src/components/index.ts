@@ -1,2 +1,5 @@
 export * from './header/header'
 export * from './footer/footer'
+export * from './Hero/Hero'
+export * from './icon/icon'
+export * from './AboutSection/AboutSection'

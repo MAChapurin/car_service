@@ -1,0 +1,10 @@
+
+.h2 {
+  @apply text-[42px] font-semibold text-center;
+  @apply mb-10;
+  /* line-height: 52px; */
+}
+
+.section {
+  @apply mb-10;
+}

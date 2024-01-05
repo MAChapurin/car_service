@@ -1,4 +1,15 @@
 .container {
-  @apply py-6 px-[70px] my-0 mx-auto;
-  max-width: 1920px;
+  @apply max-w-[1920px];
+  @apply px-[70px] my-0 mx-auto;
+  @apply font-mono;
+}
+
+.about {
+
+}
+
+.h2 {
+  @apply text-[42px] font-semibold text-center;
+  @apply mb-10;
+  /* line-height: 52px; */
 }

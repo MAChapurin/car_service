@@ -1,15 +1,38 @@
-.wrap {
+.header {
   background-color: var(--background-support-color);
   @apply w-full;
 }
 
-.header {
+.header__container {
+  @apply flex items-center justify-between;
   @apply py-6 px-[70px] my-0 mx-auto;
-  max-width: 1920px;
+  @apply max-w-[1920px];
+}
+
+.header__left {
+  @apply flex items-center gap-14;
+}
+
+.header__nav {
+  @apply flex items-center gap-[114px];
+  @apply pr-2;
+}
+
+.header__right {
+  @apply flex items-center gap-8;
 }
 
 .header__btn {
   @apply flex gap-1;
-  @apply p-2;
+  @apply px-2 py-[6px] rounded-[5px];
+  @apply font-medium text-lg;
   background-color: var(--main-color);
+}
+
+.header__link {
+  @apply font-normal text-lg;
+}
+
+.header__btn svg {
+  @apply pt-[2px];
 }

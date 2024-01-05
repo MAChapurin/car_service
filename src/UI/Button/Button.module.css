@@ -1,0 +1,6 @@
+.button {
+  @apply p-4;
+  @apply font-medium text-lg;
+  @apply rounded-2xl;
+  @apply bg-[var(--main-color)];
+}

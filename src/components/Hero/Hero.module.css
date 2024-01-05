@@ -1,0 +1,25 @@
+.hero {
+  @apply w-full;
+}
+
+.hero__container {
+  @apply flex flex-col items-center justify-center;
+  @apply p-[70px] my-0 mx-auto;
+  @apply max-w-[1920px] min-h-[900px];
+  @apply bg-no-repeat bg-center bg-cover;
+}
+
+.hero__title {
+  @apply font-semibold text-8xl;
+  @apply pt-[275px] mb-[26px];
+}
+
+.hero__description {
+  @apply font-medium text-[22px] text-center;
+  @apply mb-[16px];
+}
+
+.hero__btn {
+  @apply w-full max-w-[329px];
+  @apply text-center;
+}
