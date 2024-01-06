@@ -3,6 +3,6 @@ export interface AboutSectionProps {
   quote?: string
   description: string
   href?: string
-  background: string
+  src: string
   isReverse?: boolean
 }

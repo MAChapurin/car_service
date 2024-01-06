@@ -2,19 +2,23 @@
   @apply flex justify-between gap-5;
 }
 
-.reverse {
-  @apply flex-row-reverse;
-}
-
-.about__left,
-.about__right {
-  width: calc(50% - 20px);
+.about__left {
+  /* width: calc(50% - 20px); */
+  @apply w-full;
   @apply rounded-2xl;
 }
 
-.about__right {
-  @apply bg-no-repeat bg-cover;
+.about__img {
+  @apply min-w-[calc(50%-20px)] h-auto object-contain float-right;
+  @apply pl-5 pb-5;
+  @apply rounded-2xl;
 }
+
+.reverse {
+  @apply float-left;
+  @apply pl-0 pr-5
+}
+
 
 .about__quote {
   @apply text-[22px] font-medium text-[var(--main-color)];

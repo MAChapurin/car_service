@@ -1,7 +1,9 @@
 import { Footer, Header } from '@/components'
-import './globals.css'
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
+
+import './globals.css'
+import styles from './layout.module.css'
 
 const raleWay = Raleway ({
   subsets: ['cyrillic', 'latin'],
@@ -23,7 +25,9 @@ export default function RootLayout({
     <html lang="ru">
       <body className={raleWay.className}>
         <Header/>
+        <main className={styles.container}>
         {children}
+        </main>
         <Footer/>
       </body>
     </html>
