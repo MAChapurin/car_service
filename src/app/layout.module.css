@@ -3,13 +3,3 @@
   @apply px-[70px] my-0 mx-auto;
   @apply font-mono;
 }
-
-.about {
-
-}
-
-.h2 {
-  @apply text-[42px] font-semibold text-center;
-  @apply mb-10;
-  /* line-height: 52px; */
-}

@@ -1,6 +1,7 @@
 import { AboutSection, Hero } from "@/components";
 
 import styles from './layout.module.css'
+import { Section } from "@/components/Section/Section";
 
 export default function Home() {
   return (
@@ -12,8 +13,7 @@ export default function Home() {
         buttonContent={'Консультация'}
         background={'url(/car-hero-1920.jpg)'}
       />
-      <section className={styles.about}>
-        <h2 className={styles.h2}>О нас</h2>
+      <Section title={'О нас'}>
         <AboutSection
           quote={'Кто мы? Наши цели'}
           description={`Csa-servis – это специализированное предприятие,
@@ -29,7 +29,10 @@ export default function Home() {
           href={'/about'}
           src={'/about-car-1920.jpg'}
         />
-      </section>
+      </Section>
+      <Section title={'Наши услуги'}>
+
+      </Section>
     </>
   )
 }

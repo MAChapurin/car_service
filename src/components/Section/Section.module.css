@@ -1,0 +1,4 @@
+.h2 {
+  @apply text-[42px] font-semibold text-center;
+  @apply mb-10;
+}

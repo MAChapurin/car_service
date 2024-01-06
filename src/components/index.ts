@@ -1,4 +1,4 @@
-export * from './header/header'
+export * from './Header/Header'
 export * from './footer/footer'
 export * from './Hero/Hero'
 export * from './icon/icon'
