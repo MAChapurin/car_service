@@ -1,13 +1,15 @@
-import { AboutSection, Hero, Section } from "@/components";
+import { AboutSection, Hero, Section, ServicesItem, ServicesList } from "@/components";
+
+import { servicesTitles } from "@/constants";
 
 import styles from './layout.module.css'
 
 export default function Home() {
+  
   return (
     <>
       <Hero
         title={'CITY SERVIS AUTOMATIC'}
-
         description="Безопасность и надежность работы автомобиля"
         buttonContent={'Консультация'}
         background={'url(/car-hero-1920.jpg)'}
@@ -30,7 +32,7 @@ export default function Home() {
         />
       </Section>
       <Section title={'Наши услуги'}>
-
+        <ServicesList list={servicesTitles}/>
       </Section>
     </>
   )

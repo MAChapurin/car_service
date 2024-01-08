@@ -4,7 +4,7 @@ export interface ServicesItemProps {
   href: string
   index?: number | string
   img: string
-  className: string
+  className?: string
 }
 
 export interface ServicesListProps {

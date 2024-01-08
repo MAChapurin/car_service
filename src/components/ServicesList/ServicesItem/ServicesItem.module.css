@@ -1,0 +1,21 @@
+.link {
+  @apply block;
+  @apply relative;
+  @apply w-full h-full;
+  @apply border rounded-2xl border-[var(--main-color)];
+  @apply overflow-hidden;
+}
+
+.img {
+  @apply w-full h-full;
+}
+
+.index {
+  @apply absolute top-6 left-6;
+  @apply text-[22px] md:text-[32px] lg:text-[42px];
+}
+
+.h3 {
+  @apply absolute bottom-6 left-6;
+  @apply font-medium text-[22px] md:text-[32px];
+}
