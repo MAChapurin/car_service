@@ -1,13 +1,11 @@
-'use client'
-import Link from "next/link"
- 
-export default function _404() {
+import { useRouter } from 'next/router'
 
- 
-  return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <Link href={'/'}>На главную</Link>
-    </div>
-  )
+export default function _404() {
+  const router = useRouter()
+
+  if (typeof document !== 'undefined') {
+    router.replace('/not-found')
+  }
+
+  return null
 }

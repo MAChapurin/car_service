@@ -1,7 +1,6 @@
-import { AboutSection, Hero } from "@/components";
+import { AboutSection, Hero, Section } from "@/components";
 
 import styles from './layout.module.css'
-import { Section } from "@/components/Section/Section";
 
 export default function Home() {
   return (

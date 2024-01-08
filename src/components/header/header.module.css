@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--background-support-color);
+  @apply bg-[var(--background-support-color)]
   @apply w-full;
 }
 
@@ -26,7 +26,7 @@
   @apply flex gap-1;
   @apply px-2 py-[6px] rounded-[5px];
   @apply font-medium text-lg;
-  background-color: var(--main-color);
+  @apply bg-[var(--main-color)]
 }
 
 .header__link {

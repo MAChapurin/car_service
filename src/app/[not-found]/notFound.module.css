@@ -1,0 +1,36 @@
+.container {
+  @apply flex flex-col justify-center items-center gap-5;
+  @apply min-h-screen;
+  @apply bg-no-repeat bg-center bg-cover bg-[url('/not-found/car404-1440.jpg')] 2xl:bg-[url('/not-found/car404-1920.jpg')];
+  @apply text-center;
+}
+
+.h1 {
+  @apply sr-only;
+}
+
+.code {
+  @apply text-[100px] md:text-[256px] 2xl:text-[296px] font-bold;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+.divider {
+  @apply w-[232px] h-[2px] md:h-[5px] md:w-[690px];
+  /* @apply mb-5; */
+  @apply bg-[var(--text-color)];
+}
+
+.h2 {
+  @apply font-medium text-[32px] md:text-[64px];
+}
+
+.message {
+  @apply text-xl md:text-3xl;
+}
+
+.link {
+  @apply min-w-[243px] md:min-w-[453px];
+  @apply p-4 md:p-5;
+  @apply text-[17px] md:text-5xl;
+  @apply rounded-2xl bg-[var(--main-color)];
+}
