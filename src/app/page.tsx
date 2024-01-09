@@ -12,7 +12,7 @@ export default function Home() {
         title={'CITY SERVIS AUTOMATIC'}
         description="Безопасность и надежность работы автомобиля"
         buttonContent={'Консультация'}
-        background={'url(/car-hero-1920.jpg)'}
+        // background={'url(/car-hero-1920.jpg)'}
       />
       <Section title={'О нас'}>
         <AboutSection

@@ -9,27 +9,27 @@
 }
 
 .about__img {
-  @apply min-w-[calc(50%-20px)] h-auto object-contain float-right;
-  @apply pl-5 pb-5;
+  @apply min-w-[calc(50%-20px)] h-auto object-contain lg:float-right;
+  @apply xl:pl-5 pb-5;
   @apply rounded-2xl;
 }
 
 .reverse {
   @apply float-left;
-  @apply pl-0 pr-5
+  @apply pl-0 lg:pr-5;
 }
 
 
 .about__quote {
-  @apply text-[22px] font-medium text-[var(--main-color)];
+  @apply text-lg md:text-[22px] font-medium text-[var(--main-color)];
   @apply mb-4;
 }
 
 .about__description {
-  @apply text-lg;
+  @apply text-sm md:text-base lg:text-lg;
   @apply mb-2;
 }
 
 .about__link {
-  @apply text-base font-medium text-[var(--main-color)];
+  @apply text-xs md:text-sm lg:text-base font-medium text-[var(--main-color)];
 }

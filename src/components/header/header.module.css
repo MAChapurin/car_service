@@ -1,13 +1,17 @@
 .header {
-  @apply fixed top-0;
+  @apply fixed top-0 z-10;
   @apply bg-[var(--background-support-color)];
   @apply w-full;
 }
 
 .header__container {
   @apply flex items-center justify-between;
-  @apply py-6 px-[70px] my-0 mx-auto;
+  @apply py-6 px-5 2xl:px-[70px] my-0 mx-auto;
   @apply max-w-[1920px];
+}
+
+.header__burger {
+  @apply lg:hidden;
 }
 
 .header__left {

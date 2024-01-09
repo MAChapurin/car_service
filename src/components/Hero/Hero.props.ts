@@ -4,6 +4,6 @@ export interface HeroProps {
   title: string
   description?: string
   buttonContent: ReactNode
-  background?: string
+  // background?: string
   // cb: ()=> void
 }

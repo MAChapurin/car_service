@@ -1,25 +1,27 @@
 .hero {
   @apply w-full;
+  @apply text-center;
 }
 
 .hero__container {
   @apply flex flex-col items-center justify-center;
-  @apply p-[70px] my-0 mx-auto;
-  @apply max-w-[1920px] min-h-[900px];
+  @apply 2xl:p-[70px] my-0 mx-auto;
+  @apply w-full max-w-[1920px] min-h-[202px] md:min-h-[561px] lg:min-h-[768px] 2xl:min-h-[900px];
   @apply bg-no-repeat bg-center bg-cover;
+  @apply bg-[url(/car-hero-1920.jpg)]
 }
 
 .hero__title {
-  @apply font-semibold text-8xl;
-  @apply pt-[275px] mb-[26px];
+  @apply font-semibold text-[32px] md:text-[52px] xl:text-8xl;
+  @apply pt-[112px] md:pt-[298px] xl:pt-[275px] xl:mb-[26px];
 }
 
 .hero__description {
-  @apply font-medium text-[22px] text-center;
+  @apply font-normal md:font-medium text-xs md:text-sm xl:text-[22px] text-center;
   @apply mb-[16px];
 }
 
 .hero__btn {
   @apply w-full max-w-[329px];
-  @apply text-center;
+  @apply text-center text-base md:text-lg;
 }

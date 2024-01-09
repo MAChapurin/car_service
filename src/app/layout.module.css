@@ -1,5 +1,5 @@
 .container {
   @apply max-w-[1920px];
-  @apply px-[70px] my-0 mx-auto;
+  @apply px-5 2xl:px-[70px] my-0 mx-auto;
   @apply font-mono;
 }
