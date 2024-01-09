@@ -1,13 +1,25 @@
-import { Logo } from '@/UI'
-import Link from 'next/link'
-import { Icon } from '../icon/icon'
+'use client'
 
-import styles from './header.module.css'
+import Link from 'next/link'
+
+import { Logo } from '@/UI'
+import { Icon } from '@/components'
+
+import styles from './Header.module.css'
 
 export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
+        <button
+          aria-label='Кнопка открытия выдвижного меню'
+          className={styles.header__burger}
+          onClick={()=> {
+            alert('test burger')
+          }}
+          >
+            <Icon icon='burgerBtn'/>
+          </button>
         <div className={styles.header__left}>
           <Logo />
           <button className={styles.header__btn}>
@@ -26,7 +38,7 @@ export function Header() {
           <Link href={'/#'}>
             <Icon icon='account' />
           </Link>
-          <Link href={'tel:+78142332211'}>
+          <Link className={styles.phone} href={'tel:+78142332211'}>
             <Icon icon='phone' />
           </Link>
         </div>

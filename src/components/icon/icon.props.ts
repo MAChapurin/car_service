@@ -4,6 +4,7 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
   icon:
     | 'account'
     | 'burger'
+    | 'burgerBtn'
     | 'pin'
     | 'email'
     | 'phone'

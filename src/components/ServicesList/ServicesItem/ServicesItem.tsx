@@ -32,4 +32,4 @@ export function ServicesItem({ className, title, href, index, img }: ServicesIte
         <h3 className={cn(styles.h3, raleWay.className)}>{title}</h3>
     </Link>
   )
-} 
+}

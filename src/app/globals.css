@@ -19,6 +19,7 @@
 }
 
 body {
-  color: var(--text-color);
-  background-color: var(--background-color);
+  @apply pt-[52px] md:pt-[90px] lg:pt-[118px];
+  @apply text-[var(--text-color)];
+  @apply bg-[var(--background-color)];
 }
