@@ -1,0 +1,23 @@
+.ul {
+  @apply grid grid-cols-2 lg:grid-cols-4;
+  @apply gap-[16px_25px] md:gap-[20px_24px];
+}
+
+.li {
+  @apply flex flex-col items-center justify-center;
+  @apply min-h-[150px] md:min-h-[400px] lg:min-h-[500px];
+  @apply p-2 pt-6 md:pt-12;
+  @apply bg-[linear-gradient(180deg,#00246F_0%,#000320_100%)];
+  @apply rounded-[5px] md:rounded-2xl;
+}
+
+.h3 {
+  @apply text-center font-normal md:font-medium;
+  @apply text-xs/[20px] md:text-[22px]/[30px] 2xl:text-[32px]/[30px];
+}
+
+.icon {
+  @apply self-center;
+  @apply w-[50px] h-[50px] md:w-[180px] md:h-[180px] lg:w-[213px] lg:h-[213px];
+  @apply mb-4 md:mb-12;
+}

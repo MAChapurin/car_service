@@ -1,6 +1,6 @@
-import { AboutSection, Galery, Hero, Section, ServicesList } from "@/components";
+import { Advantages, Article, Galery, Hero, Section, ServicesList } from "@/components";
 
-import { galeryData, servicesTitles } from "@/constants";
+import { advantages, galeryData, servicesTitles } from "@/constants";
 
 import styles from './layout.module.css'
 
@@ -15,7 +15,7 @@ export default function Home() {
       // background={'url(/car-hero-1920.jpg)'}
       />
       <Section title={'О нас'}>
-        <AboutSection
+        <Article
           quote={'Кто мы? Наши цели'}
           description={`Csa-servis – это специализированное предприятие,
           занимающееся ремонтом и техническим обслуживанием автомобилей
@@ -38,7 +38,7 @@ export default function Home() {
         <Galery list={galeryData} isLink/>
       </Section>
       <Section title="Наши преимущества">
-
+      <Advantages list={advantages}/>
       </Section>
       <Section title="Полезные статьи">
 

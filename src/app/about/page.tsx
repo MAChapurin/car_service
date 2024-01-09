@@ -1,11 +1,11 @@
-import { AboutSection } from '@/components'
+import { Article } from '@/components'
 import styles from './about.module.css'
 
 export default function About() {
   return (
     <section className={styles.about}>
       <h2 className={styles.h2}>О нас</h2>
-      <AboutSection
+      <Article
         className={styles.section}
         quote={'Кто мы? Наши цели'}
         description={`Csa-servis – это специализированное предприятие,
@@ -20,7 +20,7 @@ export default function About() {
           чтобы быстро и качественно провести любые виды ремонтных и обслуживающих работ.`}
         src={'/about-car-1920.jpg'}
       />
-      <AboutSection
+      <Article
         className={styles.section}
         quote={'Что мы умеем? Наши преимущества.'}
         description={`Сsa-servis обладает особыми видами оборудования и инструментов,

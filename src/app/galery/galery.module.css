@@ -1,0 +1,4 @@
+.h1 {
+  @apply text-center font-medium md:font-semibold;
+  @apply text-[22px] md:text-[32px] lg:text-[42px];
+}

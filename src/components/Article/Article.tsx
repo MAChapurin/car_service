@@ -1,11 +1,11 @@
-import { AboutSectionProps } from './AboutSection.props'
+import { AboutSectionProps } from './Article.props'
 import Link from 'next/link'
 
 import cn from 'classnames'
-import styles from './AboutSection.module.css'
+import styles from './Article.module.css'
 import Image from 'next/image'
 
-export function AboutSection({ className, quote, description, href, src, isReverse = false }: AboutSectionProps) {
+export function Article({ className, quote, description, href, src, isReverse = false }: AboutSectionProps) {
   return (
     <div className={cn(styles.about, className, {
 
