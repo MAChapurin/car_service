@@ -1,0 +1,24 @@
+.galery {
+ 
+}
+
+.wrap {
+  @apply w-full h-[300px];
+  @apply mb-7;
+}
+
+.img {
+  @apply w-full h-full object-cover;
+}
+
+.link__wrap {
+  @apply flex items-center justify-center;
+}
+
+.link {
+  @apply inline-block;
+  @apply w-full max-w-[329px];
+  @apply p-2;
+  @apply text-center text-base md:text-lg;
+  @apply bg-[var(--main-color)] rounded;
+}

@@ -1,0 +1,76 @@
+'use client'
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import './Galery.css'
+// import 'swiper/swiper-bundle.min.css';
+import styles from './Galery.module.css'
+import { useEffect } from 'react';
+import Image from 'next/image';
+import { useResize } from '@/hooks';
+import Link from 'next/link';
+import { Button } from '@/UI';
+
+
+export function Galery({ list, isLink=false }: GaleryProps) {
+  const swiper = useSwiper();
+  const width = useResize();
+
+  function getCountSliders(width: number) {
+    if (width < 768) return 1
+    if (width < 1024) return 2
+    if (width < 1280) return 3
+    return 4
+  }
+
+  const prev = () => {
+    if (swiper) swiper.slidePrev()
+  }
+
+  const next = () => {
+    if (swiper) swiper.slideNext()
+  }
+
+  useEffect(() => {
+    console.log('swiper: ==>', swiper)
+  }, [])
+  return (
+    <div className={styles.galery}>
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={20}
+        slidesPerView={getCountSliders(width)}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+        effect={"slide"}
+        cubeEffect={{
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        }}
+      >
+        {list.map((el) => {
+          return (
+            <SwiperSlide key={el}>
+              <div className={styles.wrap}>
+                <Image className={styles.img} src={el} alt={el} width={500} height={100} />
+              </div>
+            </SwiperSlide>
+          )
+        })}
+
+      </Swiper>
+      <div className={styles.link__wrap}>
+        {isLink && <Link className={styles.link} href={'/galery'}>Смотреть еще тут</Link>}
+      </div>
+    </div>
+  )
+}

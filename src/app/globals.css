@@ -19,6 +19,7 @@
 }
 
 body {
+  @apply min-w-[375px];
   @apply pt-[52px] md:pt-[118px] lg:pt-[118px];
   @apply text-[var(--text-color)];
   @apply bg-[var(--background-color)];

@@ -1,3 +1,7 @@
+.section {
+  @apply mb-6 md:mb-10 xl:mb-20;
+}
+
 .h2 {
   @apply text-[22px] md:text-[32px] xl:text-[42px] font-medium md:font-semibold text-center;
   @apply mb-6 md:mb-10;

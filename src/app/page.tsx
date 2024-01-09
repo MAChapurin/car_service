@@ -1,6 +1,6 @@
-import { AboutSection, Hero, Section, ServicesItem, ServicesList } from "@/components";
+import { AboutSection, Galery, Hero, Section, ServicesList } from "@/components";
 
-import { servicesTitles } from "@/constants";
+import { galeryData, servicesTitles } from "@/constants";
 
 import styles from './layout.module.css'
 
@@ -12,7 +12,7 @@ export default function Home() {
         title={'CITY SERVIS AUTOMATIC'}
         description="Безопасность и надежность работы автомобиля"
         buttonContent={'Консультация'}
-        // background={'url(/car-hero-1920.jpg)'}
+      // background={'url(/car-hero-1920.jpg)'}
       />
       <Section title={'О нас'}>
         <AboutSection
@@ -32,7 +32,19 @@ export default function Home() {
         />
       </Section>
       <Section title={'Наши услуги'}>
-        <ServicesList list={servicesTitles}/>
+        <ServicesList list={servicesTitles} />
+      </Section>
+      <Section title="Фотогалерея">
+        <Galery list={galeryData} isLink/>
+      </Section>
+      <Section title="Наши преимущества">
+
+      </Section>
+      <Section title="Полезные статьи">
+
+      </Section>
+      <Section title="Контакты">
+
       </Section>
     </>
   )
