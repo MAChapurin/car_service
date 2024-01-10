@@ -9,12 +9,15 @@ import { ContactsProps } from "./Contacts.props";
 import { Subtitle } from "./Subtitle";
 
 import styles from "./Contacts.module.css";
+import { Button } from "@/UI";
+import cn from "classnames";
 
 
 
 export const Contacts = ({ address, chart, coords, email, title, phones }: ContactsProps) => {
   const { lat, lon } = coords
   console.log("YANDEXMAP:", lat, lon);
+  console.log(phones)
 
   return (
     <div className={styles.contacts}>
@@ -32,31 +35,39 @@ export const Contacts = ({ address, chart, coords, email, title, phones }: Conta
         <h3 className={styles.contacts__title}>
           {title}
         </h3>
-        <div className={styles.contacts__wrap}>
-          <Subtitle subtitle="Телефонный номер:"/>
-          {phones.map((phone) =>
-            <Link
-              className={styles.contacts__phone}
-              key={phone}
-              href={`tel${phone}`}
-            />)}
+        <div className={cn(styles.contacts__wrap, styles.contacts__phones__wrap)}>
+          <Subtitle subtitle="Телефонный номер:" />
+          <ul className={styles.phones__wrap}>
+            {phones.map((phone) => {
+              return (
+                <Link
+                  className={styles.contacts__phone}
+                  key={phone}
+                  href={`tel${phone}`}
+                >
+                  {phone}
+                </Link>
+              )
+            }
+            )}
+          </ul>
         </div>
         <div className={styles.wrap}>
-        <Subtitle subtitle="E-MAIL:"/>
-        <Link href={`mailto:${email}`} className={styles.contacts__email}>
-          {email}
-        </Link>
+          <Subtitle subtitle="E-MAIL:" />
+          <Link href={`mailto:${email}`} className={styles.contacts__email}>
+            {email}
+          </Link>
         </div>
-        
+
         <div className={styles.contacts__wrap}>
-        <Subtitle subtitle="Адрес:"/>
+          <Subtitle subtitle="Адрес:" />
           {address}
         </div>
         <div className={styles.contacts__wrap}>
-        <Subtitle subtitle="График работы:"/>
-            {chart}
+          <Subtitle subtitle="График работы:" />
+          {chart}
         </div>
-
+        <Button className={styles.contacts__btn}>Заказать обратный звонок</Button>
       </div>
     </div>
   );

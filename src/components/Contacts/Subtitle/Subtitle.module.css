@@ -1,0 +1,5 @@
+.contacts__subtitle {
+  @apply block;
+  @apply font-normal text-xs md:text-sm lg:text-base;
+  @apply mb-1;
+}

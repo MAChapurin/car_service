@@ -1,6 +1,6 @@
 .contacts {
   @apply relative;
-  @apply w-full min-h-[669px] md:min-h-[897px] lg:min-h-[584px];
+  @apply w-full min-h-[669px] md:min-h-[897px] xl:min-h-[584px];
 }
 
 .contacts__map {
@@ -10,11 +10,32 @@
 }
 
 .contacts__container {
-  @apply absolute bottom-0 left-0 lg:top-0;
-  @apply w-full h-4/5 md:h-1/2 lg:h-full lg:w-2/5;
+  @apply flex flex-col gap-6 md:flex-row md:flex-wrap;
+  @apply absolute bottom-0 left-0 xl:top-0;
+  @apply w-full h-3/4 md:h-1/2 xl:h-full xl:w-1/2;
+  @apply px-3 py-4 md:px-[94px] md:py-6 xl:py-8 xl:px-[74px];
   @apply bg-[linear-gradient(180deg,#00246F_0%,#000320_100%)];
 }
 
 .contacts__title {
   @apply font-medium text-[22px]/[30px] md:text-[32px]/[40px] lg:text-[42px]/[52px];
+  @apply w-full;
+  
+}
+
+.contacts__wrap {
+  @apply font-medium text-lg lg:text-[22px]/[30px];
+}
+
+.contacts__phones__wrap {
+  @apply md:mr-auto;
+}
+
+.phones__wrap {
+  @apply flex gap-2;
+}
+
+.contacts__btn {
+  @apply max-w-[354px];
+  @apply mt-auto py-2 px-4;
 }
