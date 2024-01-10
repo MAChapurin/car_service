@@ -4,6 +4,7 @@ import { Raleway } from 'next/font/google'
 
 import './globals.css'
 import styles from './layout.module.css'
+import { contacts, navigationLinks, servicesTitles } from '@/constants'
 
 const raleWay = Raleway ({
   subsets: ['cyrillic', 'latin'],
@@ -21,6 +22,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const services = servicesTitles.map((el)=> el.title)
   return (
     <html lang="ru">
       <body className={raleWay.className}>
@@ -28,7 +30,7 @@ export default function RootLayout({
         <main className={styles.container}>
         {children}
         </main>
-        <Footer/>
+        <Footer contacts={contacts} navigation={navigationLinks} services={services}/>
       </body>
     </html>
   )
