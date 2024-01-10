@@ -1,6 +1,6 @@
-import { Advantages, Article, Galery, Hero, Section, ServicesList } from "@/components";
+import { Advantages, Article, Contacts, Galery, Hero, Section, ServicesList } from "@/components";
 
-import { advantages, galeryData, servicesTitles } from "@/constants";
+import { advantages, contacts, galeryData, servicesTitles } from "@/constants";
 
 import styles from './layout.module.css'
 
@@ -41,10 +41,10 @@ export default function Home() {
       <Advantages list={advantages}/>
       </Section>
       <Section title="Полезные статьи">
-
+      
       </Section>
       <Section title="Контакты">
-
+        <Contacts {...contacts}/>
       </Section>
     </>
   )

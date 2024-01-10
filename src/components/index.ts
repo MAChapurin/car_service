@@ -1,5 +1,6 @@
 export * from './Article/Article'
 export * from './Advantages/Advantages'
+export * from './Contacts/Contacts'
 export * from './footer/footer'
 export * from './Galery/Galery'
 export * from './Header/Header'

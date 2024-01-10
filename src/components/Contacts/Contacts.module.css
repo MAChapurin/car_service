@@ -1,0 +1,20 @@
+.contacts {
+  @apply relative;
+  @apply w-full min-h-[669px] md:min-h-[897px] lg:min-h-[584px];
+}
+
+.contacts__map {
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+  @apply invert grayscale;
+}
+
+.contacts__container {
+  @apply absolute bottom-0 left-0 lg:top-0;
+  @apply w-full h-4/5 md:h-1/2 lg:h-full lg:w-2/5;
+  @apply bg-[linear-gradient(180deg,#00246F_0%,#000320_100%)];
+}
+
+.contacts__title {
+  @apply font-medium text-[22px]/[30px] md:text-[32px]/[40px] lg:text-[42px]/[52px];
+}
