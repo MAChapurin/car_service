@@ -35,7 +35,27 @@
 }
 
 .header__link {
+  @apply relative;
   @apply font-normal text-lg;
+  @apply transition ease-in-out;
+  @apply hover:text-[var(--main-color)];
+}
+
+.header__link::after {
+  @apply content-[''];
+  @apply absolute left-0 -bottom-2;
+  @apply w-full h-[2px];
+  @apply bg-[var(--main-color)];
+  @apply transition-transform;
+  @apply scale-x-0;
+}
+
+.active {
+  @apply text-[var(--main-color)];
+}
+
+.header__link:hover::after {
+  @apply  scale-x-100;
 }
 
 .header__btn svg {
