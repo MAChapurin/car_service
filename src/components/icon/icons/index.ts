@@ -1,4 +1,5 @@
 export * from './Account'
+export * from './ArrowUp'
 export * from './Badge'
 export * from './Burger'
 export * from './BurgerBtn'

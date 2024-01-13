@@ -1,7 +1,11 @@
-import { useState, useEffect, SetStateAction } from 'react';
+'use client'
+
+import { useState, useEffect} from 'react';
 
 interface IEvent {
-  target: any;
+  target: {
+    innerWidth: number
+  };
 }
 
 export const useResize = () => {

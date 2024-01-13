@@ -1,0 +1,13 @@
+.btn {
+  @apply fixed bottom-5 right-5 z-10;
+  @apply opacity-0;
+  @apply transition-opacity duration-500;
+}
+
+.btn svg {
+  @apply fill-[var(--main-color)];
+}
+
+.shown {
+  @apply opacity-70;
+}

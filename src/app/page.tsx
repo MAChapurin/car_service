@@ -41,7 +41,7 @@ export default function Home() {
       <Advantages list={advantages}/>
       </Section>
       <Section title="Полезные статьи">
-      
+      {''}
       </Section>
       <Section title="Контакты">
         <Contacts {...contacts}/>

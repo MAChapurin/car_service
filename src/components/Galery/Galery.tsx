@@ -1,7 +1,11 @@
 'use client'
+
+import { useEffect } from 'react';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import Link from 'next/link';
 
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { useResize } from '@/hooks';
 
 import 'swiper/css';
 import 'swiper/css/navigation'
@@ -9,16 +13,14 @@ import 'swiper/css/pagination'
 import './Galery.css'
 // import 'swiper/swiper-bundle.min.css';
 import styles from './Galery.module.css'
-import { useEffect } from 'react';
 import Image from 'next/image';
-import { useResize } from '@/hooks';
-import Link from 'next/link';
 import { Button } from '@/UI';
 
 
 export function Galery({ list, isLink=false }: GaleryProps) {
   const swiper = useSwiper();
   const width = useResize();
+  // const width =4;
 
   function getCountSliders(width: number) {
     if (width < 768) return 1

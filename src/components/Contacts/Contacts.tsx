@@ -6,19 +6,16 @@ import Link from "next/link";
 
 import { ContactsProps } from "./Contacts.props";
 
+import { Button } from "@/UI";
 import { Subtitle } from "./Subtitle";
 
 import styles from "./Contacts.module.css";
-import { Button } from "@/UI";
 import cn from "classnames";
 
 
 
 export const Contacts = ({ address, chart, coords, email, title, phones }: ContactsProps) => {
   const { lat, lon } = coords
-  console.log("YANDEXMAP:", lat, lon);
-  console.log(phones)
-
   return (
     <div className={styles.contacts}>
       <YMaps>

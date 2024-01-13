@@ -2,6 +2,7 @@ import { SVGProps } from 'react';
 
 export type IconType =
   | 'account'
+  | 'arrowUp'
   | 'badge'
   | 'burger'
   | 'burgerBtn'

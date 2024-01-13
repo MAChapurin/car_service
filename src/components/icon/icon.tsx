@@ -1,9 +1,10 @@
 import { IconProps } from "./icon.props"
-import { Account, Badge, Burger, BurgerBtn, Checked, Email, Gear, People, Phone, Pin, Telegramm, Time, WhatsUp } from "./icons"
+import { Account, ArrowUp, Badge, Burger, BurgerBtn, Checked, Email, Gear, People, Phone, Pin, Telegramm, Time, WhatsUp } from "./icons"
 
 export function Icon({ icon, ...props }: IconProps) {
   const iconsConfig = {
     ['account']: <Account {...props} />,
+    ['arrowUp']: <ArrowUp {...props}/>,
     ['badge']: <Badge {...props}/>,
     ['burger']: <Burger {...props} />,
     ['burgerBtn']: <BurgerBtn {...props} />,
