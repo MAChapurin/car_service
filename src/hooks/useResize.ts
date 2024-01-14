@@ -3,9 +3,7 @@
 import { useState, useEffect} from 'react';
 
 interface IEvent {
-  target: {
-    innerWidth: number
-  };
+  target: any
 }
 
 export const useResize = () => {
