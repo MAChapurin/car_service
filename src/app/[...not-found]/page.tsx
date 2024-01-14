@@ -1,8 +1,6 @@
 'use client'
 import Link from "next/link"
 
-import { useRouter } from "next/router"
-import { Button } from "@/UI"
 import { Raleway, Source_Serif_4 } from "next/font/google"
 
 import cn from 'classnames'

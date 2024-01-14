@@ -41,11 +41,11 @@ export function Header() {
           </nav>
 
           <div className={styles.header__right}>
+          <Link className={styles.phone} href={'tel:+78142332211'}>
+              <Icon icon='phone' />
+            </Link>
             <Link href={'/#'}>
               <Icon icon='account' />
-            </Link>
-            <Link className={styles.phone} href={'tel:+78142332211'}>
-              <Icon icon='phone' />
             </Link>
           </div>
 
