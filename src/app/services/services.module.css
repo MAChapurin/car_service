@@ -1,0 +1,11 @@
+.ul {
+  @apply grid gap-5;
+  @apply grid-cols-[repeat(auto-fit,minmax(175px,_1fr))];
+  /* @apply xl:grid-cols-4; */
+
+  grid-auto-rows: 200px;
+}
+
+.tabbar {
+  @apply mb-5;
+}

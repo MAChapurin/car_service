@@ -9,4 +9,5 @@ export interface ServicesItemProps {
 
 export interface ServicesListProps {
   list: ServicesItemProps[]
+  className?: string
 }
