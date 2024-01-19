@@ -1,0 +1,13 @@
+.ul {
+  @apply grid gap-5;
+  @apply grid-cols-[repeat(auto-fit,minmax(335px,_1fr))];
+  /* @apply xl:grid-cols-4; */
+}
+
+.li {
+  @apply relative;
+  @apply flex flex-col justify-end;
+  @apply min-h-[200px];
+  @apply border rounded-2xl border-[var(--main-color)];
+  @apply overflow-hidden;
+}

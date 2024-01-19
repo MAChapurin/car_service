@@ -5,6 +5,7 @@ export interface ServicesItemProps {
   index?: number | string
   img: string
   className?: string
+
 }
 
 export interface ServicesListProps {

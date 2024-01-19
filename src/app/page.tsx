@@ -2,7 +2,7 @@ import { Advantages, Article, Contacts, Galery, Hero, Section, ServicesList } fr
 
 import { advantages, contacts, galeryData, servicesTitles } from "@/constants";
 
-import styles from './layout.module.css'
+// import styles from './layout.module.css'
 
 export default function Home() {
   

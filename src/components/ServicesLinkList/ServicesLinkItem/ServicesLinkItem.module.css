@@ -1,0 +1,11 @@
+.link {
+  @apply flex flex-col justify-end items-center;
+  @apply w-full h-full;
+  @apply p-4;
+}
+
+.img {
+  @apply absolute top-0 left-0 ring-0 bottom-0 -z-10;
+  @apply w-full h-full;
+  @apply object-cover;
+}
