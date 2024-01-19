@@ -9,4 +9,12 @@
   @apply min-h-[200px];
   @apply border rounded-2xl border-[var(--main-color)];
   @apply overflow-hidden;
+  @apply shadow-[0px_0px_15px_0px_rgba(15,1,247,0.5)];
+  @apply transition-shadow;
+}
+
+
+.li:hover {
+  @apply shadow-[0px_0px_100px_0px_rgba(15,1,247,0.5)_inset,0px_0px_50px_0px_rgba(15,1,247,0.5)];
+  
 }

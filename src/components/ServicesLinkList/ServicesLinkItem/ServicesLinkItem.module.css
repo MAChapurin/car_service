@@ -2,10 +2,30 @@
   @apply flex flex-col justify-end items-center;
   @apply w-full h-full;
   @apply p-4;
+  /* box-shadow: 0px 0px 50px 0px rgba(15, 1, 247, 0.5); */
 }
+
+.link:hover {
+  /* @apply shadow-[0_35px_60px_15px_rgba(255,255,255,0.9)]; */
+  
+  
+}
+
+.link:hover img {
+  @apply scale-125;
+}
+
+/* .link:hover .h4 {
+  @apply text-[var(--main-color)];
+} */
 
 .img {
   @apply absolute top-0 left-0 ring-0 bottom-0 -z-10;
   @apply w-full h-full;
   @apply object-cover;
+  @apply transition-transform;
+}
+
+.h4 {
+  @apply transition-colors;
 }
