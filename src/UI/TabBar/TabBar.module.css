@@ -2,3 +2,31 @@
   @apply flex justify-center gap-8;
   @apply w-full;
 }
+
+.btn {
+  @apply relative;
+  @apply hover:text-[var(--main-color)];
+  @apply transition-transform;
+}
+
+.btn::after {
+  @apply content-[''];
+  @apply absolute left-0 -bottom-2;
+  @apply w-full h-[2px];
+  @apply bg-[var(--main-color)];
+  @apply transition-transform;
+  @apply scale-x-0;
+}
+
+.btn:hover:after {
+  @apply scale-x-100;
+}
+
+.btn.active::after {
+  @apply scale-x-100;
+}
+
+.btn.active {
+  @apply text-[var(--main-color)];
+  @apply scale-x-100;
+}
