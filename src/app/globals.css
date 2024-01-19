@@ -20,7 +20,7 @@
 }
 
 body {
-  @apply min-w-[375px];
+  @apply min-w-[375px] min-h-screen;
   @apply pt-[52px] md:pt-[118px] lg:pt-[118px];
   @apply text-[var(--text-color)];
   @apply bg-[var(--background-color)];

@@ -1,0 +1,32 @@
+.h1 {
+  @apply text-[22px] md:text-[32px] xl:text-[42px] font-medium md:font-semibold text-center;
+  @apply mb-6 md:mb-10;
+}
+
+.content {
+  @apply min-h-[400px];
+  @apply mb-8 lg:mb-10;
+}
+
+.img {
+  @apply float-left;
+  @apply max-w-[400px];
+  @apply mr-4 mb-4;
+  @apply border rounded-2xl border-[var(--main-color)];
+}
+
+.links {
+  @apply flex flex-wrap justify-center gap-5;
+}
+
+.link {
+  @apply w-full max-w-[335px];
+  @apply p-4;
+  @apply font-medium text-lg text-center;
+  @apply rounded-2xl border border-[var(--main-color)];
+}
+
+.link__subscribe {
+  @apply bg-[var(--main-color)];
+}
+
