@@ -1,4 +1,4 @@
-import { Footer, Header } from '@/components'
+import { Breadcrumbs, Footer, Header } from '@/components'
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
 
@@ -28,6 +28,7 @@ export default function RootLayout({
       <body className={raleWay.className}>
         <Header/>
         <main className={styles.container}>
+          <Breadcrumbs/>
         {children}
         </main>
         <Footer contacts={contacts} navigation={navigationLinks} services={services}/>

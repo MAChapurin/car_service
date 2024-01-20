@@ -37,7 +37,7 @@
 .header__link {
   @apply relative;
   @apply font-normal text-lg;
-  @apply transition ease-in-out;
+  @apply transition-colors ease-in-out;
   @apply hover:text-[var(--main-color)];
 }
 

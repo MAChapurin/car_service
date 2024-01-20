@@ -1,0 +1,10 @@
+.nav {
+  @apply fixed top-[123px];
+  @apply flex gap-2;
+}
+
+.link {
+  @apply font-medium text-xs md:text-lg text-[var(--text-gray)];
+  @apply transition-colors ease-in-out;
+  @apply hover:text-[var(--main-color)];
+}
