@@ -16,5 +16,4 @@
 
 .li:hover {
   @apply shadow-[0px_0px_100px_0px_rgba(15,1,247,0.5)_inset,0px_0px_50px_0px_rgba(15,1,247,0.5)];
-  
 }

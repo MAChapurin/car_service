@@ -1,22 +1,46 @@
 'use client'
+import { ChangeEvent, MouseEvent, SyntheticEvent, useState } from "react";
 
-import { TabBar } from "@/UI";
+import { Input, TabBar } from "@/UI";
 import { Section, ServicesLinkList, ServicesList } from "@/components";
 import { servicesTitles, detailsServices } from "@/constants";
 
 import styles from './services.module.css'
-import { useState } from "react";
 
 export default function Services() {
   const [sortType, setSortType] = useState<string>()
-  function handlerTab(e: React.SyntheticEvent) {
-    // console.log(e.target)  
-    if(e.target instanceof HTMLButtonElement) {
-      console.log(e.target.dataset.type)
+  const [search, setSearch] = useState<string>('')
+
+  function handleTab(e: SyntheticEvent<HTMLButtonElement, Event>) {
+    setSearch('')
+    if (e.target instanceof HTMLButtonElement) {
       const value = e.target.dataset.type
       setSortType(value)
     }
   }
+
+  function handleSearch(e: ChangeEvent<HTMLInputElement>) {
+    if (e.target) {
+      setSortType(undefined)
+      setSearch(e.target.value)
+    }
+  }
+
+  function handleBlur() {
+    setSearch('')
+    setSortType(undefined)
+  }
+
+  const filterTabs = [...detailsServices]
+    .filter(el => {
+      if (!sortType) return el
+      return el.type === sortType
+    })
+
+  const filterSearch = [...detailsServices]
+    .filter(el => el.title
+      .toLocaleLowerCase()
+      .includes(search.toLocaleLowerCase()))
 
   const all = {
     title: 'Все',
@@ -25,17 +49,34 @@ export default function Services() {
 
   return (
     <Section title="Услуги">
+      <Input
+        onChange={handleSearch}
+        onBlur={handleBlur}
+        placeholder={'Я ищу...'}
+        type="search"
+        value={search} />
       <TabBar
         className={styles.tabbar}
         list={[...servicesTitles, all]}
-        callback={handlerTab} 
-        sortType={sortType}/>
-      <ServicesLinkList
-        className={styles.ul}
-        list={[...detailsServices].filter(el => {
-          if (!sortType) return el
-          return el.type === sortType
-        })} />
+        callback={handleTab}
+        sortType={sortType} />
+      {search!?.length === 0 &&
+        <ServicesLinkList
+          className={styles.ul}
+          list={filterTabs} />}
+      {
+        search &&
+        <ServicesLinkList
+          list={filterSearch}
+        />
+      }
+
+      {
+        filterSearch.length === 0 &&
+        <p className={styles.message}>
+          По вашему запросу ничего не найдено
+        </p>
+      }
     </Section>
   )
 }

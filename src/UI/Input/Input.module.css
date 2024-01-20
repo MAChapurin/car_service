@@ -1,0 +1,11 @@
+.input {
+  @apply bg-transparent;
+  @apply border-b border-b-[var(--main-color)];
+  @apply shadow-[0px_0px_5px_0px_rgba(15,1,247,0.5)];
+  @apply transition-shadow;
+}
+
+.input:focus, .input:hover {
+  @apply outline-none;
+  @apply shadow-[0px_0px_10px_0px_rgba(15,1,247,0.5)_inset,0px_0px_15px_5px_rgba(15,1,247,0.5)];
+}
