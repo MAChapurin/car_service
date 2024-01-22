@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import cn from 'classnames'
 
 import { ButtonProps } from './Button.props'
@@ -11,11 +13,13 @@ export function Button({
   ...props
 }: ButtonProps) {
   return (
+    <>
     <button
       className={cn(styles.button, className)}
       {...props}
-    >
+      >
       {children}
     </button>
+  </>
   )
 }

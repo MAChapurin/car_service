@@ -1,3 +1,7 @@
+'use client'
+
+import { motion } from "framer-motion";
+
 import { Button } from '@/UI'
 
 import { Inter } from 'next/font/google'
@@ -16,13 +20,49 @@ const inter = Inter({
 export function Hero({ buttonContent, description, title }: HeroProps) {
   return (
     <section className={styles.hero}>
-      {/* <div style={{ background }} className={styles.hero__container}> */}
       <div className={styles.hero__container}>
-        <h1 className={styles.hero__title}>{title}</h1>
-        {description && <p className={cn(styles.hero__description, inter.className)}>{description}</p>}
-        <Button className={styles.hero__btn}>
-          {buttonContent}
-        </Button>
+        <motion.h1
+          className={styles.hero__title}
+          initial={{ translateY: 500, opacity: 0 }}
+          animate={{ translateY: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+            duration: 300
+          }}
+        >{title}</motion.h1>
+        {description && <motion.p
+          className={cn(styles.hero__description, inter.className)}
+          initial={{ translateY: 500, opacity: 0 }}
+          animate={{ translateY: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+            duration: 300,
+            delay: 0.5,
+          }}
+        >{description}</motion.p>}
+        <motion.div
+        className={styles.hero__btn_wrap}
+        initial={{ translateY: 500, opacity: 0 }}
+        animate={{ translateY: 0, opacity: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+          duration: 300,
+          delay: 0.7,
+        }}
+        >
+
+          <Button
+            className={styles.hero__btn}
+          >
+            {buttonContent}
+          </Button>
+        </motion.div>
       </div>
     </section>
   )

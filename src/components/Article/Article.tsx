@@ -1,3 +1,7 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
 import { AboutSectionProps } from './Article.props'
 import Link from 'next/link'
 
@@ -7,9 +11,20 @@ import Image from 'next/image'
 
 export function Article({ className, quote, description, href, src, isReverse = false }: AboutSectionProps) {
   return (
-    <div className={cn(styles.about, className, {
-
-    })}>
+    <motion.div className={cn(styles.about, className)}
+      initial={{ translateY: 500, opacity: 0 }}
+      animate={{ translateY: 0, opacity: 1 }}
+      exit={{ opacity: 0.1 }}
+      viewport={{ once: true }}
+      
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+        duration: 500,
+        delay: 0.5,
+      }}
+    >
       <div className={styles.about__left}>
 
         <Image
@@ -24,6 +39,6 @@ export function Article({ className, quote, description, href, src, isReverse = 
         <p className={styles.about__description}>{description}</p>
         {href && <Link aria-label='Переход в раздел О нас' className={styles.about__link} href={href}>Подробнее...</Link>}
       </div>
-    </div>
+    </motion.div>
   )
 }

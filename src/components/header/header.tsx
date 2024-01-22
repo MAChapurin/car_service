@@ -26,10 +26,6 @@ export function Header() {
           </button>
           <div className={styles.header__left}>
             <Logo />
-            {/* <button className={styles.header__btn}>
-            <Icon icon='burger' />
-            Услуги
-          </button> */}
           </div>
 
           <nav className={styles.header__nav}>
@@ -41,7 +37,7 @@ export function Header() {
           </nav>
 
           <div className={styles.header__right}>
-          <Link className={styles.phone} href={'tel:+78142332211'}>
+            <Link className={styles.phone} href={'tel:+78142332211'}>
               <Icon icon='phone' />
             </Link>
             <Link href={'/#'}>

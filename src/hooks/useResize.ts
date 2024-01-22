@@ -7,13 +7,15 @@ interface IEvent {
 }
 
 export const useResize = () => {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(2000);
 
   useEffect(() => {
     const handleResize = (event: IEvent) => {
       if (event.target.innerWidth) setWidth(event.target.innerWidth)
     };
+  if(window) {
     window.addEventListener('resize', handleResize)
+  }
     return () => {
       window.removeEventListener('resize', handleResize)
     };
