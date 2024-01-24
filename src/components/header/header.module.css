@@ -6,7 +6,7 @@
 
 .header__container {
   @apply flex items-center justify-between;
-  @apply py-6 px-5 2xl:px-[70px] my-0 mx-auto;
+  @apply py-3 md:py-6 px-5 2xl:px-[70px] my-0 mx-auto;
   @apply max-w-[1920px];
 }
 

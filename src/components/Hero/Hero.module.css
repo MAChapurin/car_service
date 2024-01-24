@@ -5,7 +5,7 @@
 
 .hero__container {
   @apply flex flex-col items-center justify-center;
-  @apply 2xl:p-[70px] my-0 mx-auto;
+  @apply p-5 2xl:p-[70px] my-0 mx-auto;
   @apply w-full max-w-[1920px] min-h-[202px] md:min-h-[561px] lg:min-h-[768px] 2xl:min-h-[900px];
   @apply bg-no-repeat bg-center bg-cover;
   @apply bg-[url(/car-hero-1920.jpg)]

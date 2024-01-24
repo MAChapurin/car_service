@@ -1,4 +1,5 @@
 .input {
+  @apply mb-1;
   @apply bg-transparent;
   @apply border-b border-b-[var(--main-color)];
   @apply shadow-[0px_0px_5px_0px_rgba(15,1,247,0.5)];

@@ -2,6 +2,11 @@
  
 }
 
+.h3 {
+  @apply font-medium text-lg md:text-xl;
+  @apply mb-2;
+}
+
 .wrap {
   @apply w-full h-[300px];
   @apply mb-7;

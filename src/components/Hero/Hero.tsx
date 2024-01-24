@@ -21,40 +21,14 @@ export function Hero({ buttonContent, description, title }: HeroProps) {
   return (
     <section className={styles.hero}>
       <div className={styles.hero__container}>
-        <motion.h1
+        <h1
           className={styles.hero__title}
-          initial={{ translateY: 500, opacity: 0 }}
-          animate={{ translateY: 0, opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 20,
-            duration: 300
-          }}
-        >{title}</motion.h1>
-        {description && <motion.p
+        >{title}</h1>
+        {description && <p
           className={cn(styles.hero__description, inter.className)}
-          initial={{ translateY: 500, opacity: 0 }}
-          animate={{ translateY: 0, opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 20,
-            duration: 300,
-            delay: 0.5,
-          }}
-        >{description}</motion.p>}
-        <motion.div
-        className={styles.hero__btn_wrap}
-        initial={{ translateY: 500, opacity: 0 }}
-        animate={{ translateY: 0, opacity: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-          duration: 300,
-          delay: 0.7,
-        }}
+        >{description}</p>}
+        <div
+          className={styles.hero__btn_wrap}
         >
 
           <Button
@@ -62,7 +36,7 @@ export function Hero({ buttonContent, description, title }: HeroProps) {
           >
             {buttonContent}
           </Button>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

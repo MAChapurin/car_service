@@ -21,11 +21,11 @@ export default function GaleryPage() {
   const reverseData = [...galeryData].reverse();
   return (
     <>
-    <h1 className={styles.h1}>Фотогалерея</h1>
-    <Galery list={galeryData}/>
-    <Galery list={reverseData}/>
-    <Galery list={galeryData}/>
-    <Galery list={reverseData}/>
+      <h1 className={styles.h1}>Фотогалерея</h1>
+      <Galery list={galeryData} title={'Ряд первый'} />
+      <Galery list={reverseData} title={'Ряд второй'} />
+      <Galery list={galeryData} title={'Ряд третий'} />
+      <Galery list={reverseData} title={'Ряд четвертый'} />
     </>
   )
 }

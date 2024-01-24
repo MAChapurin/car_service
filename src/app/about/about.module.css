@@ -1,5 +1,5 @@
 .h2 {
-  @apply text-[42px] font-semibold text-center;
+  /* @apply text-[42px] font-semibold text-center; */
   @apply mb-10;
   /* line-height: 52px; */
 }

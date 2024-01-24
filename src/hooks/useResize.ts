@@ -7,7 +7,7 @@ interface IEvent {
 }
 
 export const useResize = () => {
-  const [width, setWidth] = useState(2000);
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = (event: IEvent) => {
