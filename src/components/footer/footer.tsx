@@ -9,86 +9,82 @@ import styles from './Footer.module.css'
 export function Footer({ contacts, navigation, services }: FooterProps) {
   const { address, chart, email, phones } = contacts
   return (
+    <>
       <footer className={styles.footer}>
         <div className={styles.footer__container}>
-          <div className={styles.footer__contacts}>
+          <section className={styles.footer__contacts}>
             <h2 className={styles.footer__title}>CSA SERVIS</h2>
-            <div className={styles.footer__wrap}>
-              <Icon className={styles.footer__icon} icon='phone' />
+            <div className={styles.footer__phones}>
               {phones.map((phone) => {
                 return (
                   <Link
-                    className={styles.footer__phone}
+                    className={styles.footer__wrap}
                     key={phone}
                     href={`tel${phone}`}
                   >
+                    <Icon className={styles.footer__icon} icon='phone' />
                     {phone}
                   </Link>
                 )
               })}
             </div>
-            <div className={styles.footer__wrap}>
+            <Link href={`mailto:${email}`} className={styles.footer__wrap}>
               <Icon className={styles.footer__icon} icon='email' />
               {email}
-            </div>
-            <div className={styles.footer__wrap}>
+            </Link>
+            <Link href={'/contacts'} className={styles.footer__wrap}>
               <Icon className={styles.footer__icon} icon='pin' />
               {address}
-            </div>
-            <div className={styles.footer__wrap}>
+            </Link>
+            <Link href={'contacts'} className={styles.footer__wrap}>
               <Icon className={styles.footer__icon} icon='time' />
               {chart}
-            </div>
-          </div>
+            </Link>
+          </section>
 
-          <div className={styles.footer__services}>
-            <h3 className={styles.footer__h3}>Услуги</h3>
-            <nav className={styles.footer__nav}>
-              {services.map((service) => {
-                return (
-                  <Link
-                    className={styles.footer__link}
-                    key={service}
-                    href={service}
-                  >
-                    {service}
-                  </Link>
-                )
-              })}
-            </nav>
-          </div>
+          <section className={styles.footer__center}>
+            <h3 className={styles.footer__h3}>Прочее</h3>
+            <Link href='/' className={styles.footer__wrap}>
+              <Icon className={styles.footer__icon} icon='faq' width={24} />
+              Часто задаваемые воросы
+            </Link>
+            <Link href='/' className={styles.footer__wrap}>
+              <Icon className={styles.footer__icon} icon='confidence' width={24} />
+              Политика конфиденциальности
+            </Link>
+            <Link href='/' className={styles.footer__wrap}>
+              <Icon className={styles.footer__icon} icon='data' width={24} />
+              Политика обработка данных
+            </Link>
+            <Link href='/' className={styles.footer__wrap}>
+              <Icon className={styles.footer__icon} icon='pact' width={24} />
+              Соглашение на обработку данных
+            </Link>
+          </section>
 
-          <div className={styles.footer__navigation}>
-            <h3 className={styles.footer__h3}>Навигация по сайту</h3>
-            <nav className={styles.footer__nav}>
-              {navigation.map((link) => {
-                return (
-                  <Link
-                    className={styles.footer__link}
-                    key={link}
-                    href={link}
-                  >
-                    {link}
-                  </Link>
-                )
-              })}
-            </nav>
-
-            <h3 className={styles.footer__h3}>Навигация по сайту</h3>
-
+          <section className={styles.footer__right}>
+            <h3 className={styles.footer__h3}>Соцсети</h3>
             <div className={styles.footer__socials}>
-              <div className={styles.footer__wrap}>
+              <Link className={styles.footer__wrap} href={`tel:${'Whats up'}`}>
                 <Icon className={styles.footer__icon} icon='whatsUp' />
-                <Link href={`tel:${'Whats up'}`}>Whats up</Link>
-              </div>
-              <div className={styles.footer__wrap}>
+              </Link>
+              <Link className={styles.footer__wrap} href={`tel:${'Whats up'}`}>
                 <Icon className={styles.footer__icon} icon='telegramm' />
-                <Link href={`tel:${'Whats up'}`}>Telegram</Link>
-              </div>
+              </Link>
+              <Link className={styles.footer__wrap} href={`/vk.com`}>
+                <Icon className={styles.footer__icon} icon='vk' />
+              </Link>
+              <Link className={styles.footer__wrap} href={`/instagramm.com`}>
+                <Icon className={styles.footer__icon} icon='instagramm' />
+              </Link>
             </div>
-          </div>
+          </section>
 
         </div>
       </footer>
+      <div className={styles.underFooter}>
+      © { new Date().getFullYear()}
+      </div>
+    </>
   )
 }

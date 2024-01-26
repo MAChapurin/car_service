@@ -14,9 +14,10 @@ interface IContacts {
 
 export const contacts: IContacts = {
   title: 'CSA CITY SERVIS AUTOMATIC',
-  phones: ['+79034499220', '+79883673411'],
+  // phones: ['+79034499220', '+79883673411'],
+  phones: ['+79034499220'],
   coords: { lat: 55.752004, lon: 37.617734 },
   email: 'csa-servis@mail.ru',
   address: 'г.Краснодар ул. Селезнева 157',
-  chart: 'С понедельника по субботу с 10:00 до 19:00 без перерыва.',
+  chart: 'С понедельника по субботу с 10:00 до 19:00',
 };

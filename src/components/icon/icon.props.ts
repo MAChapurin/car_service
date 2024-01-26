@@ -7,12 +7,18 @@ export type IconType =
   | 'burger'
   | 'burgerBtn'
   | 'checked'
+  | 'confidence'
+  | 'data'
+  | 'faq'
   | 'gear'
+  | 'instagramm'
+  | 'pact'
   | 'people'
   | 'pin'
   | 'email'
   | 'phone'
   | 'time'
+  | 'vk'
   | 'whatsUp'
   | 'telegramm';
 
