@@ -1,13 +1,31 @@
-.link {
-  @apply block;
+.service {
   @apply relative;
   @apply w-full h-full;
   @apply border rounded-2xl border-[var(--main-color)];
   @apply overflow-hidden;
+  @apply cursor-pointer;
+  @apply shadow-[0px_0px_15px_0px_rgba(15,1,247,0.5)];
+  @apply transition-shadow;
+}
+
+.service:focus {
+  @apply outline-none;
+  @apply shadow-[0px_0px_100px_0px_rgba(15,1,247,0.5)_inset,0px_0px_50px_0px_rgba(15,1,247,0.5)];
+}
+
+
+.service:focus img {
+
+}
+
+.service:hover img,
+.service:focus img {
+  @apply scale-125;
 }
 
 .img {
   @apply w-full h-full;
+  @apply transition-transform duration-500;
 }
 
 .index {
@@ -18,4 +36,23 @@
 .h3 {
   @apply absolute bottom-6 left-6;
   @apply font-medium text-[22px] md:text-[32px];
+}
+
+.ul {
+  @apply absolute top-0 ring-0 left-0 bottom-0;
+  @apply h-full w-full;
+  @apply py-4 px-6;
+  @apply backdrop-brightness-50;
+  @apply overflow-y-auto;
+  @apply transition-all;
+}
+
+.link {
+@apply transition-colors duration-300;
+}
+
+.link:hover,
+.link:focus {
+  @apply outline-none;
+  @apply text-[var(--main-color)];
 }
