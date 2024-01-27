@@ -1,6 +1,7 @@
 export * from './Article/Article'
 export * from './Advantages/Advantages'
 export * from './Breadcrumbs/Breadcrumbs'
+export * from './BurgerMenu/BurgerMenu'
 export * from './Contacts/Contacts'
 export * from './Footer/Footer'
 export * from './Galery/Galery'

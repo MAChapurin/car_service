@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { Logo, ScrollBtn } from '@/UI'
-import { Icon } from '@/components'
+import { BurgerMenu, Icon } from '@/components'
 
 import cn from 'classnames'
 import styles from './Header.module.css'
@@ -15,7 +15,7 @@ export function Header() {
     <>
       <header className={styles.header}>
         <div className={styles.header__container}>
-          <button
+          {/* <button
             aria-label='Кнопка открытия выдвижного меню'
             className={styles.header__burger}
             onClick={() => {
@@ -23,7 +23,8 @@ export function Header() {
             }}
           >
             <Icon icon='burgerBtn' />
-          </button>
+          </button> */}
+          <BurgerMenu/>
           <div className={styles.header__left}>
             <Logo />
           </div>

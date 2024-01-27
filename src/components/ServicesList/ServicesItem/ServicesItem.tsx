@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ServicesItemProps, ServicesListProps } from "../ServicesList.props";
 import Image from "next/image";
 
-import { AnimatePresence, delay, motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 import cn from "classnames";
 import styles from './ServicesItem.module.css'
