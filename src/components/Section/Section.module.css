@@ -1,6 +1,6 @@
 .section {
   @apply mb-6 md:mb-10 xl:mb-20;
-  @apply pt-6;
+  @apply pt-10;
 }
 
 .h2 {

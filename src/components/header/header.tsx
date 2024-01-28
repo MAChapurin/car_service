@@ -15,15 +15,6 @@ export function Header() {
     <>
       <header className={styles.header}>
         <div className={styles.header__container}>
-          {/* <button
-            aria-label='Кнопка открытия выдвижного меню'
-            className={styles.header__burger}
-            onClick={() => {
-              alert('test burger')
-            }}
-          >
-            <Icon icon='burgerBtn' />
-          </button> */}
           <BurgerMenu/>
           <div className={styles.header__left}>
             <Logo />
@@ -45,7 +36,6 @@ export function Header() {
               <Icon icon='account' />
             </Link>
           </div>
-
         </div>
       </header>
       <ScrollBtn />

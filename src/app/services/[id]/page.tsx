@@ -20,7 +20,7 @@ export default function DetailServicePage({ params }: { params: { id: string } }
   const { title, img, description } = detailService
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1 className={styles.h1}>{title}</h1>
       <div className={styles.content}>
         <Image

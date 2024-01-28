@@ -1,4 +1,4 @@
-import { Galery } from "@/components";
+import { Galery, Section } from "@/components";
 
 // import { galeryData } from "@/constants";
 
@@ -20,12 +20,12 @@ export default function GaleryPage() {
 
   const reverseData = [...galeryData].reverse();
   return (
-    <>
-      <h1 className={styles.h1}>Фотогалерея</h1>
+    <Section title="Фотогалерея">
+      {/* <h1 className={styles.h1}></h1> */}
       <Galery list={galeryData} title={'Ряд первый'} />
       <Galery list={reverseData} title={'Ряд второй'} />
       <Galery list={galeryData} title={'Ряд третий'} />
       <Galery list={reverseData} title={'Ряд четвертый'} />
-    </>
+    </Section>
   )
 }

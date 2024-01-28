@@ -3,6 +3,12 @@
   @apply grid-cols-[repeat(auto-fit,minmax(335px,_1fr))];
 }
 
+.ul.short {
+  @apply flex justify-center;
+  @apply max-w-[335px];
+  @apply my-0 mx-auto;
+}
+
 .li {
   @apply relative;
   @apply flex flex-col justify-end;

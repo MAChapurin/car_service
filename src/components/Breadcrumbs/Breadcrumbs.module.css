@@ -1,7 +1,10 @@
 .nav {
-  @apply fixed top-16 md:top-[90px] lg:top-[123px];
+  @apply fixed top-[55px] md:top-[89px] lg:top-[123px];
   @apply flex gap-2;
-  @apply z-20;
+  @apply p-2 rounded-b-md;
+  @apply z-10;
+  @apply bg-[var(--background-support-color)];
+  @apply transition-[width] duration-500;
 }
 
 .link {

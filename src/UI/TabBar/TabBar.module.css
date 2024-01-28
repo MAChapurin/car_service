@@ -1,6 +1,7 @@
 .ul {
   @apply flex justify-center gap-8;
   @apply w-full;
+  @apply overflow-x-auto;
 }
 
 .btn {

@@ -17,7 +17,7 @@ import Image from 'next/image';
 import { Button } from '@/UI';
 
 
-export function Galery({ list, title=null, isLink=false }: GaleryProps) {
+export function Galery({ list, title = null, isLink = false }: GaleryProps) {
   const swiper = useSwiper();
   const width = useResize();
   // const width =4;
@@ -40,10 +40,13 @@ export function Galery({ list, title=null, isLink=false }: GaleryProps) {
   useEffect(() => {
     console.log('swiper: ==>', swiper)
   }, [])
+
+  if (!window) return null
+  
   return (
     <div className={styles.galery}>
       {title &&
-      <h3 className={styles.h3}>{title}</h3>
+        <h3 className={styles.h3}>{title}</h3>
       }
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}

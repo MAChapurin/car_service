@@ -2,9 +2,10 @@
 import { ChangeEvent, MouseEvent, SyntheticEvent, useState } from "react";
 
 import { Input, TabBar } from "@/UI";
-import { Section, ServicesLinkList, ServicesList } from "@/components";
+import { Section, ServicesLinkList } from "@/components";
 import { servicesTitles, detailsServices } from "@/constants";
 
+import cn from 'classnames'
 import styles from './services.module.css'
 
 export default function Services() {
@@ -51,7 +52,7 @@ export default function Services() {
     <Section title="Услуги">
       <Input
         onChange={handleSearch}
-        onBlur={handleBlur}
+        // onBlur={handleBlur}
         placeholder={'Я ищу...'}
         type="search"
         value={search} />
