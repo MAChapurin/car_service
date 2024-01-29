@@ -4,7 +4,6 @@
 }
 
 .footer__container {
-  /* @apply grid grid-cols-3 md:gap-10; */
   @apply flex justify-between flex-wrap;
   @apply py-6 px-5 2xl:px-[70px] my-0 mx-auto;
   @apply max-w-[1920px];

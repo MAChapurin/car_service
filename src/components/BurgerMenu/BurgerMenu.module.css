@@ -46,10 +46,32 @@
   @apply -rotate-45 delay-100;
 }
 
-.nav {
-  @apply fixed top-[120px] z-30;
+.container {
+  @apply absolute top-[50px] md:top-[88px] z-30 lg:hidden;
   @apply flex flex-col gap-3;
-  @apply w-[375px];
-  @apply p-4;
-  @apply bg-[var(--background-support-color)];
+  @apply w-[335px];
+  @apply p-4 pt-12;
+  @apply bg-[var(--background-support-color)] rounded-b-xl;
+  @apply overflow-y-scroll;
+}
+
+.nav {
+  @apply flex flex-col gap-3;
+}
+
+.burger__link {
+  @apply text-base lg:text-lg;
+}
+
+.burger__wrap {
+  @apply flex items-center justify-start gap-2;
+  @apply transition-colors;
+}
+
+.burger__socials {
+  @apply flex lg:flex-col lg:items-end gap-6;
+}
+
+.burger__rest {
+  @apply flex flex-col gap-6;
 }
