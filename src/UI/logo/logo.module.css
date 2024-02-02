@@ -1,3 +1,16 @@
 .logo {
   @apply w-[30px] h-[25px] md:w-[50px] md:h-[41px] lg:w-[90px] lg:h-[75px];
 }
+
+.logo path {
+  @apply transition-colors duration-300;
+}
+
+.logo:hover path,
+.link:focus path {
+  @apply fill-[var(--main-color)];
+}
+
+.link:focus {
+  @apply outline-none;
+}

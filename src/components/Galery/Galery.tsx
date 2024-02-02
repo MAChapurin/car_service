@@ -37,45 +37,45 @@ export function Galery({ list, title = null, isLink = false }: GaleryProps) {
     if (swiper) swiper.slideNext()
   }
 
-  useEffect(() => {
-    console.log('swiper: ==>', swiper)
-  }, [])
-
-  if (!window) return null
-  
   return (
     <div className={styles.galery}>
       {title &&
         <h3 className={styles.h3}>{title}</h3>
       }
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={20}
-        slidesPerView={getCountSliders(width)}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-        effect={"slide"}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        }}
-      >
-        {list.map((el) => {
-          return (
-            <SwiperSlide key={el}>
-              <div className={styles.wrap}>
-                <Image className={styles.img} src={el} alt={el} width={500} height={100} />
-              </div>
-            </SwiperSlide>
-          )
-        })}
+      {width ?
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={20}
+          slidesPerView={width ? getCountSliders(width) : 'auto'}
+          // slidesPerView={'auto'}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+          effect={"slide"}
+          cubeEffect={{
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+          }}
+        >
+          {list.map((el) => {
+            return (
+              <SwiperSlide key={el}>
+                <div className={styles.wrap}>
+                  <Image className={styles.img} src={el} alt={el} width={500} height={100} />
+                </div>
+              </SwiperSlide>
+            )
+          })}
 
-      </Swiper>
+        </Swiper> :
+        <div className={styles.loader}>
+          loading
+        </div>
+      }
       <div className={styles.link__wrap}>
         {isLink && <Link className={styles.link} href={'/galery'}>Смотреть еще тут</Link>}
       </div>

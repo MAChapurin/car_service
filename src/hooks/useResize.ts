@@ -1,23 +1,23 @@
-'use client'
-
-import { useState, useEffect} from 'react';
-
-interface IEvent {
-  target: any
-}
+import { useState, useLayoutEffect } from 'react';
 
 export const useResize = () => {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState<number | null>(null);
 
-  useEffect(() => {
-    const handleResize = (event: IEvent) => {
-      if (event.target.innerWidth) setWidth(event.target.innerWidth)
+  useLayoutEffect(() => {
+    const setWidthScreens = () => {
+      setWidth(window?.innerWidth);
     };
-  if(window) {
-    window.addEventListener('resize', handleResize)
-  }
+    setWidthScreens();
+  }, []);
+
+  useLayoutEffect(() => {
+    const handleResize = () => {
+      const size = window?.innerWidth;
+      if (size) setWidth(size);
+    };
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 

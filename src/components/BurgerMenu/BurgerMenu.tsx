@@ -1,5 +1,4 @@
 'use client'
-
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -46,9 +45,10 @@ export function BurgerMenu() {
   const pathname = usePathname()
   const [isVisible, setVisible] = useState<boolean>(false)
 
-  const body = document.querySelector('body')
+
 
   useEffect(() => {
+    const body = document.querySelector('body')
     if (body) {
       body.setAttribute('style', `${isVisible && "overflow: hidden"}`)
     }
