@@ -18,6 +18,20 @@ const inter = Inter({
 })
 
 export function Hero({ buttonContent, description, title }: HeroProps) {
+  const handlerBtn = () => {
+    if (typeof window !== 'undefined') {
+      const el = document.getElementById('contacts-btn');
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        // el.focus();
+        setTimeout(()=> {
+          el.focus()
+          // alert('test')
+          console.log(document.activeElement)
+        },2000)
+      }
+    }
+  }
   return (
     <section className={styles.hero}>
       <div className={styles.hero__container}>
@@ -32,6 +46,7 @@ export function Hero({ buttonContent, description, title }: HeroProps) {
         >
 
           <Button
+            onClick={handlerBtn}
             className={styles.hero__btn}
           >
             {buttonContent}

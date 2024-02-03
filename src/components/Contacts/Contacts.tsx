@@ -64,7 +64,7 @@ export const Contacts = ({ address, chart, coords, email, title, phones }: Conta
           <Subtitle subtitle="График работы:" />
           {chart}
         </div>
-        <Button className={styles.contacts__btn}>Заказать обратный звонок</Button>
+        <Button id="contacts-btn" className={styles.contacts__btn}>Заказать обратный звонок</Button>
       </div>
     </div>
   );

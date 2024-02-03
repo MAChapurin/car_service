@@ -38,4 +38,14 @@
 .contacts__btn {
   @apply max-w-[354px];
   @apply mt-auto py-2 px-4;
+  @apply transition-shadow;
+}
+
+.contacts__btn:hover {
+  @apply shadow-[0px_0px_15px_0px_rgba(15,1,247,0.5)];
+}
+
+.contacts__btn:focus {
+  @apply outline-2 outline-white outline;
+  @apply shadow-[0px_0px_50px_0px_rgba(15,1,247,0.5)];
 }
