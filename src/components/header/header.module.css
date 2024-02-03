@@ -27,11 +27,27 @@
   @apply flex items-center gap-8;
 }
 
+.header__right svg path {
+  @apply transition-colors duration-300;
+}
+
+.header__right a:hover svg path {
+  @apply fill-[var(--main-color)];
+}
+
+.header__right a:focus {
+  @apply outline-none;
+}
+
+.header__right a:focus svg path {
+  @apply fill-[var(--main-color)];
+}
+
 .header__btn {
   @apply hidden lg:flex gap-1;
   @apply px-2 py-[6px] rounded-[5px];
   @apply font-medium text-lg;
-  @apply bg-[var(--main-color)]
+  @apply bg-[var(--main-color)];
 }
 
 .header__link {
@@ -39,6 +55,11 @@
   @apply font-normal text-lg;
   @apply transition-colors ease-in-out;
   @apply hover:text-[var(--main-color)];
+}
+
+.header__link:focus {
+  @apply outline-none;
+  @apply text-[var(--main-color)];
 }
 
 .header__link::after {
@@ -54,8 +75,9 @@
   @apply text-[var(--main-color)];
 }
 
-.header__link:hover::after {
-  @apply  scale-x-100;
+.header__link:hover::after,
+.header__link:focus::after {
+  @apply scale-x-100;
 }
 
 .header__btn svg {

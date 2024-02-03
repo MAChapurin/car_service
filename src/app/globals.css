@@ -10,14 +10,13 @@
   margin: 0;
 }
 
-
 :root {
   --text-color: #fff;
-  --main-color: #0053FF;
-  --text-gray: #8E919C;
+  --main-color: #0053ff;
+  --text-gray: #8e919c;
   --background-color: #090909;
   --background-support-color: #151515;
-  --background-gradient: linear-gradient(180deg, #00246F 0%, #000320 100%);
+  --background-gradient: linear-gradient(180deg, #00246f 0%, #000320 100%);
 }
 
 body {
@@ -25,4 +24,13 @@ body {
   @apply pt-[52px] md:pt-[90px] lg:pt-[118px];
   @apply text-[var(--text-color)];
   @apply bg-[var(--background-color)];
+}
+
+a {
+  @apply no-underline;
+}
+
+a:active {
+  @apply transition-transform;
+  @apply scale-95;
 }

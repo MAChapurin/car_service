@@ -28,7 +28,7 @@
 }
 
 .loader {
-  background: gray;
+  background: var(--background-support-color);
   width: 100%;
   height: 300px;
   display: flex;

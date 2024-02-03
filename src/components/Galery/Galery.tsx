@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect } from 'react';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import Link from 'next/link';
 
@@ -15,6 +14,7 @@ import './Galery.css'
 import styles from './Galery.module.css'
 import Image from 'next/image';
 import { Button } from '@/UI';
+import { Loader } from '@/components';
 
 
 export function Galery({ list, title = null, isLink = false }: GaleryProps) {
@@ -73,7 +73,7 @@ export function Galery({ list, title = null, isLink = false }: GaleryProps) {
 
         </Swiper> :
         <div className={styles.loader}>
-          loading
+          <Loader />
         </div>
       }
       <div className={styles.link__wrap}>

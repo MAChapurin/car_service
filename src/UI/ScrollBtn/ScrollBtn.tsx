@@ -24,9 +24,10 @@ export function ScrollBtn(props: ScrollBtnProps) {
 
   return (
     <button
-      className={cn(styles.btn, {
-        [styles.shown]: scrollY > 500
-      })}
+      className={cn(styles.btn,
+        {
+          [styles.shown]: scrollY > 500
+        })}
       onClick={scrollToUp} {...props}>
       <Icon icon="arrowUp" />
     </button>

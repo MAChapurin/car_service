@@ -1,7 +1,8 @@
 .btn {
   @apply fixed bottom-5 right-5 z-10;
+  @apply rounded-[50%];
   @apply opacity-0;
-  @apply transition-opacity duration-500;
+  @apply transition-opacity transition-transform duration-500;
 }
 
 .btn svg {
@@ -10,4 +11,14 @@
 
 .shown {
   @apply opacity-70;
+}
+
+.btn:hover,
+.btn.shown:focus {
+  @apply opacity-100 outline-none;
+  @apply shadow-[0px_0px_15px_0px_rgba(15,1,247,0.5)];
+}
+
+.btn:active {
+  @apply scale-95;
 }
