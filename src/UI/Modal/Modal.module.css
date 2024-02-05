@@ -1,0 +1,13 @@
+.modal {
+  @apply fixed top-0 ring-0 bottom-0 left-0 z-40;
+  @apply flex justify-center items-center;
+  @apply w-full h-full;
+  @apply cursor-pointer;
+  background-color: rgb(0 0 0 / 50%);
+  backdrop-filter: blur(2px);
+}
+
+.content {
+  @apply relative z-50;
+  @apply w-min h-min;
+}

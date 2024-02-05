@@ -25,7 +25,8 @@ export default function RootLayout({
   const services = servicesTitles.map((el)=> el.title)
   return (
     <html lang="ru">
-      <body className={raleWay.className}>
+      <body className={`relative ${raleWay.className}`}>
+        <div id='portal'></div>
         <Header/>
         <main className={styles.container}>
           <Breadcrumbs/>

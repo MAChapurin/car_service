@@ -1,0 +1,49 @@
+.container {
+  @apply relative;
+  @apply min-w-[300px] w-full max-w-[600px];
+  @apply bg-[var(--background-support-color)] rounded-2xl;
+  @apply p-5;
+  @apply transition-[width] duration-[0.9s];
+}
+
+.form {
+  @apply flex flex-col gap-3;
+  
+}
+
+.input {
+  @apply w-full;
+  @apply p-2;
+  @apply bg-transparent;
+  @apply border border-[var(--text-gray)] rounded;
+}
+
+.input:focus {
+  @apply outline-none -outline-offset-1 outline-[var(--main-color)]
+}
+
+.wrap {
+  @apply flex gap-1;
+  @apply text-xs text-nowrap;
+}
+
+.submitBtn, 
+.success button
+{
+  @apply max-w-[354px];
+  @apply mt-auto py-2 px-4;
+  @apply transition-shadow;
+}
+
+.submitBtn:hover {
+  @apply shadow-[0px_0px_15px_0px_rgba(15,1,247,0.5)];
+}
+
+.submitBtn:focus {
+  @apply outline-2 outline-white outline;
+  @apply shadow-[0px_0px_50px_0px_rgba(15,1,247,0.5)];
+}
+
+.success {
+  @apply flex flex-col items-center justify-center gap-4;
+}
