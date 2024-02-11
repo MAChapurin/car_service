@@ -8,6 +8,7 @@ export type IconType =
   | 'burgerBtn'
   | 'checked'
   | 'confidence'
+  | 'close'
   | 'data'
   | 'faq'
   | 'gear'
