@@ -1,0 +1,25 @@
+.link {
+  @apply relative;
+  @apply flex flex-col items-center justify-center;
+  @apply w-full h-[300px];
+  @apply border rounded-2xl border-[var(--main-color)];
+  @apply overflow-hidden;
+  @apply cursor-pointer;
+  @apply shadow-[0px_0px_15px_0px_rgba(15,1,247,0.5)];
+  @apply transition-shadow;
+}
+
+.link:hover .img{
+  @apply scale-125;
+}
+
+.img {
+  @apply w-full h-full;
+  @apply transition-transform duration-500;
+}
+
+.h3 {
+  @apply absolute bottom-6 left-6;
+  @apply font-medium text-[22px] md:text-[32px];
+}
+

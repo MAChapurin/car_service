@@ -1,4 +1,4 @@
-import { Advantages, Article, Contacts, Galery, Hero, Section, ServicesList } from "@/components";
+import { Advantages, Article, Contacts, Galery, Hero, Section, ServicesList, Watched } from "@/components";
 
 import { advantages, contacts, galeryData, servicesTitles } from "@/constants";
 
@@ -34,6 +34,7 @@ export default function Home() {
       <Section title={'Наши услуги'}>
         <ServicesList list={servicesTitles} />
       </Section>
+      <Watched/>
       <Section title="Фотогалерея">
         <Galery list={galeryData} isLink/>
       </Section>

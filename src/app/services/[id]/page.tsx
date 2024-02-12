@@ -1,4 +1,5 @@
 'use client'
+import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 
@@ -10,8 +11,7 @@ import styles from './DetailServicesPage.module.css'
 import Link from 'next/link';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import { Button } from '@/UI';
-import { addCervice, deleteService } from '@/store/features';
-import { useState } from 'react';
+import { addCervice, addWatchedCervice, deleteService } from '@/store/features';
 
 
 export default function DetailServicePage({ params }: { params: { id: string } }) {
@@ -35,6 +35,12 @@ export default function DetailServicePage({ params }: { params: { id: string } }
       console.log(cart)
     }
   }
+
+  useEffect(()=> {
+    if(detailService) {
+      dispatch(addWatchedCervice(detailService))
+    }
+  }, [])
 
 
   if (!detailService) {

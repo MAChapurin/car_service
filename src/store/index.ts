@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import cart from './features/cart/cart.slice'
+import watched from './features/watched/watched.slice'
 
 const store = configureStore({
   reducer: {
-    cart
+    cart,
+    watched
   },
 })
 
