@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 
 import { detailsServices } from "@/constants";
@@ -6,10 +8,34 @@ import cn from 'classnames'
 
 import styles from './DetailServicesPage.module.css'
 import Link from 'next/link';
+import { useAppDispatch, useAppSelector } from '@/hooks';
+import { Button } from '@/UI';
+import { addCervice, deleteService } from '@/store/features';
+import { useState } from 'react';
 
 
 export default function DetailServicePage({ params }: { params: { id: string } }) {
   const detailService = detailsServices.find(service => service.id === params.id)
+
+  const dispatch = useAppDispatch()
+  const { cart } = useAppSelector(state => state.cart)
+  const isInCart = cart.find(service => service.id === detailService?.id)
+  const [btnText, setBtnText] = useState<'Добавить услугу' | 'Убрать услугу'>(isInCart ? 'Убрать услугу' : 'Добавить услугу')
+
+  const handlerbtn = () => {
+    if (detailService) {
+      if (isInCart) {
+        dispatch(deleteService(detailService.id))
+        setBtnText('Добавить услугу')
+      } else {
+        dispatch(addCervice(detailService))
+        setBtnText('Убрать услугу')
+      }
+
+      console.log(cart)
+    }
+  }
+
 
   if (!detailService) {
     return (
@@ -35,8 +61,15 @@ export default function DetailServicePage({ params }: { params: { id: string } }
         </p>
       </div>
       <div className={styles.links}>
-        <Link className={cn(styles.link, styles.link__subscribe)} href={'/'}>Оформить услугу</Link>
-        <Link className={cn(styles.link)} href={'/services'}>Посмотреть другие услуги</Link>
+        <Button
+          className={cn(styles.link, styles.link__subscribe)}
+          onClick={handlerbtn}
+        >{btnText}</Button>
+        <Link
+          className={cn(styles.link)}
+          href={'/services'}>
+          Посмотреть другие услуги
+        </Link>
       </div>
     </div>
   )

@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+import { useAppSelector } from '@/hooks'
+
 import { Logo, ScrollBtn } from '@/UI'
 import { BurgerMenu, Icon } from '@/components'
 
@@ -11,11 +13,12 @@ import styles from './Header.module.css'
 
 export function Header() {
   const pathname = usePathname()
+  const { cart } = useAppSelector(state => state.cart)
   return (
     <>
       <header className={styles.header}>
         <div className={styles.header__container}>
-          <BurgerMenu/>
+          <BurgerMenu />
           <div className={styles.header__left}>
             <Logo />
           </div>
@@ -29,6 +32,17 @@ export function Header() {
           </nav>
 
           <div className={styles.header__right}>
+
+            <Link
+              href={'/cart'}
+              className={styles.header__cart}
+            >
+              <Icon icon='cart' />
+              <span
+                className={styles.header__cartCount}>
+                {cart.length > 0 && cart.length}
+              </span>
+            </Link>
             <Link className={styles.phone} href={'tel:+78142332211'}>
               <Icon icon='phone' />
             </Link>

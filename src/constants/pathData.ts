@@ -24,4 +24,8 @@ export const pathData: IPathData[] = [
     path: '/contacts',
     title: 'Контакты',
   },
+  {
+    path: '/cart',
+    title: 'Корзина',
+  },
 ];

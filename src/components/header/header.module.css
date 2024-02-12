@@ -87,3 +87,16 @@
 .phone {
   @apply hidden md:inline-block;
 }
+
+.header__cart {
+  @apply relative;
+}
+
+.header__cart:hover .header__cartCount{
+   @apply text-[var(--main-color)];
+}
+
+.header__cartCount {
+  @apply absolute -bottom-4 -right-1;
+  @apply transition-colors duration-300;
+}

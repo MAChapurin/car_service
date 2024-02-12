@@ -6,6 +6,7 @@ export type IconType =
   | 'badge'
   | 'burger'
   | 'burgerBtn'
+  | 'cart'
   | 'checked'
   | 'confidence'
   | 'close'

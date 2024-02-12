@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import { ServicesItemProps, ServicesListProps } from "../ServicesList.props";
+import { ServicesItemProps } from "../ServicesList.props";
 import Image from "next/image";
 
 import { AnimatePresence, motion } from 'framer-motion'
@@ -55,7 +55,7 @@ const ulAnimation = {
 }
 
 
-export function ServicesItem({ className, title, href, index, img, links }: ServicesItemProps) {
+export function ServicesItem({ className, title, img, links }: ServicesItemProps) {
   const [isOpen, setOpen] = useState<boolean>(false)
   return (
     <motion.div
@@ -66,7 +66,7 @@ export function ServicesItem({ className, title, href, index, img, links }: Serv
       onBlur={() => { setOpen(false) }}
       initial={wrapAnimation.hidden}
       whileInView={wrapAnimation.visible}
-      transition={{duration: 0.5}}
+      transition={{ duration: 0.5 }}
     >
       <Image
         className={styles.img}
@@ -75,7 +75,7 @@ export function ServicesItem({ className, title, href, index, img, links }: Serv
         width={430}
         height={499}
       />
-     
+
       <AnimatePresence>
         {!isOpen
           &&
@@ -84,7 +84,7 @@ export function ServicesItem({ className, title, href, index, img, links }: Serv
             initial={textAnimation.hidden}
             whileInView={textAnimation.visible}
             exit={textAnimation.hidden}
-            transition={{duration: 0.5}}
+            transition={{ duration: 0.5 }}
           >
             {title}
           </motion.h3>
@@ -102,12 +102,12 @@ export function ServicesItem({ className, title, href, index, img, links }: Serv
           >
             {links.map(({ title, id }, index) => {
               return (
-                <motion.li 
-                key={id}
-                initial={textAnimation.hidden}
-                whileInView={textAnimation.visible}
-                exit={textAnimation.hidden}
-                transition={{duration: 0.2 + index/10}}
+                <motion.li
+                  key={id}
+                  initial={textAnimation.hidden}
+                  whileInView={textAnimation.visible}
+                  exit={textAnimation.hidden}
+                  transition={{ duration: 0.2 + index / 10 }}
                 >
 
                   <Link className={styles.link} href={'/services/' + id}>
