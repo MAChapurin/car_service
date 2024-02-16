@@ -3,4 +3,10 @@
   @apply font-medium text-lg;
   @apply rounded-2xl;
   @apply bg-[var(--main-color)];
+  @apply transition-opacity;
+}
+
+.button:disabled {
+  @apply opacity-50;
+  @apply cursor-not-allowed;
 }
