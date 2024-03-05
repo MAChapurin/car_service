@@ -1,7 +1,8 @@
 'use client'
 import { useEffect, useState } from 'react';
-
 import Image from 'next/image';
+
+import { motion } from "framer-motion";
 
 import { detailsServices } from "@/constants";
 
@@ -12,6 +13,25 @@ import Link from 'next/link';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import { Button } from '@/UI';
 import { addCervice, addWatchedCervice, deleteService } from '@/store/features';
+
+const textAnimation = {
+  hidden: {
+    x: 100,
+    opacity: 0
+  },
+  visible: {
+    x: 0,
+    opacity: 1
+  },
+  hiddenScale: {
+    scale: 0,
+    // opacity: 0
+  },
+  visibleScale: {
+    scale: 1,
+    // opacity: 1
+  }
+}
 
 
 export default function DetailServicePage({ params }: { params: { id: string } }) {
@@ -36,8 +56,8 @@ export default function DetailServicePage({ params }: { params: { id: string } }
     }
   }
 
-  useEffect(()=> {
-    if(detailService) {
+  useEffect(() => {
+    if (detailService) {
       dispatch(addWatchedCervice(detailService))
     }
   }, [])
@@ -53,29 +73,57 @@ export default function DetailServicePage({ params }: { params: { id: string } }
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.h1}>{title}</h1>
+      <motion.h1
+        className={styles.h1}
+        initial={textAnimation.hiddenScale}
+        whileInView={textAnimation.visibleScale}
+        exit={textAnimation.hiddenScale}
+        transition={{ duration: 0.3 }}
+      >{title}</motion.h1>
       <div className={styles.content}>
-        <Image
-          alt={title}
-          className={styles.img}
-          src={img}
-          width={700}
-          height={400}
-        />
-        <p className={styles.description}>
+        <motion.div
+          className={styles.wrap}
+          initial={textAnimation.hiddenScale}
+          whileInView={textAnimation.visibleScale}
+          exit={textAnimation.hiddenScale}
+          transition={{ duration: 0.3 }}
+        >
+          <Image
+            alt={title}
+            className={styles.img}
+            src={img}
+            width={700}
+            height={400}
+          />
+        </motion.div>
+        <motion.p
+          className={styles.description}
+          initial={textAnimation.hidden}
+          whileInView={textAnimation.visible}
+          exit={textAnimation.hidden}
+          transition={{ duration: 0.3 }}
+        >
           {description}
-        </p>
+        </motion.p>
       </div>
       <div className={styles.links}>
         <Button
           className={cn(styles.link, styles.link__subscribe)}
           onClick={handlerbtn}
         >{btnText}</Button>
-        <Link
+        <motion.div
           className={cn(styles.link)}
-          href={'/services'}>
-          Посмотреть другие услуги
-        </Link>
+          initial={textAnimation.hidden}
+          whileInView={textAnimation.visible}
+          exit={textAnimation.hidden}
+          transition={{ duration: 0.3, delay: 0.3 }}
+        >
+          <Link
+            // className={cn(styles.link)}
+            href={'/services'}>
+            Посмотреть другие услуги
+          </Link>
+        </motion.div>
       </div>
     </div>
   )

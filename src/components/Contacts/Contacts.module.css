@@ -5,9 +5,11 @@
 
 .contacts__map {
   @apply absolute top-0 left-0;
+  @apply pb-[500px] md:pb-[450px] lg:pb-0 lg:pl-[50%];
   @apply w-full h-full;
   @apply invert grayscale;
 }
+
 
 .contacts__container {
   @apply flex flex-col gap-6 md:flex-row md:flex-wrap;

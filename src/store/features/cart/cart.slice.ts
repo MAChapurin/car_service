@@ -14,7 +14,7 @@ interface ICart {
 
 const keyLS = 'cart'
 
-const cartLS = localStorage.getItem(keyLS)
+const cartLS = localStorage?.getItem(keyLS)
 
 const initialState: ICart = {
   cart: cartLS ? JSON.parse(cartLS) : [],

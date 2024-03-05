@@ -25,6 +25,7 @@ export function Title({ title }: TitleProps) {
       whileInView={textAnimation.visible}
       exit={textAnimation.hidden}
       transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
     >
       {title}
     </motion.h2>

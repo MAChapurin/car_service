@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import { YMaps, Map, ZoomControl } from "@pbe/react-yandex-maps";
+import { YMaps, Map, ZoomControl, Placemark } from "@pbe/react-yandex-maps";
 
 
 import { ContactsProps } from "./Contacts.props";
@@ -34,7 +34,8 @@ export const Contacts = ({ address, chart, coords, email, title, phones }: Conta
             state={{ center: [lat, lon], zoom: 9, behaviors: ['drag'] }}
             defaultState={{ center: [lat, lon], zoom: 9 }}
           >
-            <ZoomControl/>
+            <ZoomControl options={{ position: { right: '10px' }, size: 'auto' }} />
+            <Placemark geometry={[lat, lon]} />
           </Map>
         </div>
       </YMaps>

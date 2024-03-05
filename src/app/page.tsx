@@ -5,7 +5,7 @@ import { advantages, contacts, galeryData, servicesTitles } from "@/constants";
 // import styles from './layout.module.css'
 
 export default function Home() {
-  
+  console.log(process.env.pass)
   return (
     <>
       <Hero

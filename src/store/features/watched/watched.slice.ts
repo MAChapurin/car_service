@@ -14,7 +14,7 @@ interface ICart {
 
 const keyLS = 'watched'
 
-const watchedLS = localStorage.getItem(keyLS)
+const watchedLS = localStorage?.getItem(keyLS)
 
 const initialState: ICart = {
   watched: watchedLS ? JSON.parse(watchedLS) : []

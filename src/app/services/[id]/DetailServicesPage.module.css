@@ -12,10 +12,17 @@
   @apply mb-8 lg:mb-10;
 }
 
-.img {
+.wrap {
   @apply float-left;
   @apply max-w-[400px];
   @apply mr-4 mb-4;
+  @apply border rounded-2xl border-[var(--main-color)];
+}
+
+.img {
+  /* @apply float-left; */
+  @apply max-w-[400px];
+  /* @apply mr-4 mb-4; */
   @apply border rounded-2xl border-[var(--main-color)];
 }
 
