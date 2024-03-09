@@ -35,6 +35,7 @@ export function Watched() {
             whileInView={textAnimation.visible}
             exit={textAnimation.hidden}
             transition={{ duration: 0.3 }}
+            viewport={{ once: true }}
           >
             <Swiper
               modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -81,6 +82,7 @@ export function Watched() {
                           whileInView={textAnimation.visible}
                           exit={textAnimation.hidden}
                           transition={{ duration: 0.3, delay: 0.3 }}
+                          viewport={{ once: true }}
                         >
                           {title}
                         </motion.h3>

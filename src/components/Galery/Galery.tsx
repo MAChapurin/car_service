@@ -76,6 +76,7 @@ export function Galery({ list, title = null, isLink = false }: GaleryProps) {
       whileInView={containerAnimation.visible}
       exit={containerAnimation.hidden}
       transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
     >
       {title &&
         <h3 className={styles.h3}>{title}</h3>
@@ -134,6 +135,7 @@ export function Galery({ list, title = null, isLink = false }: GaleryProps) {
         whileInView={btnAnimation.visible}
         exit={btnAnimation.hidden}
         transition={{ duration: 0.9 }}
+        viewport={{ once: true }}
       >
         {isLink && <Link className={styles.link} href={'/galery'}>Смотреть еще тут</Link>}
       </motion.div>
@@ -148,6 +150,7 @@ export function Galery({ list, title = null, isLink = false }: GaleryProps) {
               whileInView={swiperXLAnimation.visible}
               exit={swiperXLAnimation.hidden}
               transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
             >
               <button
                 className={styles.modal__close}

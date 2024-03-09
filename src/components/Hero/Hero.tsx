@@ -50,6 +50,7 @@ export function Hero({ buttonContent, description, title }: HeroProps) {
           whileInView={textAnimation.visible}
           exit={textAnimation.hidden}
           transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
         >
           {title}
         </motion.h1>
@@ -59,6 +60,7 @@ export function Hero({ buttonContent, description, title }: HeroProps) {
           whileInView={textAnimation.visible}
           exit={textAnimation.hidden}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           {description}
           </motion.p>}

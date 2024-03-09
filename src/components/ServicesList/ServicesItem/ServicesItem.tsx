@@ -67,6 +67,7 @@ export function ServicesItem({ className, title, img, links }: ServicesItemProps
       initial={wrapAnimation.hidden}
       whileInView={wrapAnimation.visible}
       transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
     >
       <Image
         className={styles.img}

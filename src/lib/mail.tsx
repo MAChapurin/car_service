@@ -6,8 +6,8 @@ const smtpTransport = mailer.createTransport({
 	port: 465,
 	secure: true,
 	auth: {
-		user: 'm4chapurin@yandex.ru',
-		pass: 'Metro2245'
+		user: process.env.user,
+		pass: process.env.pass
 	},
 	tls: {rejectUnauthorized: false},
 }, {

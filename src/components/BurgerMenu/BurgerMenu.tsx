@@ -10,12 +10,10 @@ import { Icon } from ".."
 
 const burgerAnimation = {
   hidden: {
-    // x: -100,
     y: -100,
     opacity: 0
   },
   visible: {
-    // x: 0,
     y: 0,
     opacity: 1
   }
@@ -95,6 +93,7 @@ export function BurgerMenu() {
             initial={burgerAnimation.hidden}
             whileInView={burgerAnimation.visible}
             exit={burgerAnimation.hidden}
+            viewport={{ once: true }}
           >
             <motion.nav
               className={styles.nav}

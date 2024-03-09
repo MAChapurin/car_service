@@ -40,6 +40,7 @@ export function Article({ className, quote, description, href, src, isReverse = 
             whileInView={textAnimation.visible}
             exit={textAnimation.hidden}
             transition={{ duration: 0.3 }}
+            viewport={{ once: true }}
           >
             {quote}
           </motion.blockquote>}
@@ -49,6 +50,7 @@ export function Article({ className, quote, description, href, src, isReverse = 
           whileInView={textAnimation.visible}
           exit={textAnimation.hidden}
           transition={{ duration: 0.3, delay: 0.3 }}
+          viewport={{ once: true }}
         >
           {description}
         </motion.p>

@@ -51,6 +51,7 @@ export function Breadcrumbs() {
       initial={navAnimation.hidden}
       whileInView={navAnimation.visible}
       exit={navAnimation.hidden}
+      viewport={{ once: true }}
     >
       <li>
         <Link
