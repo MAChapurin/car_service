@@ -4,16 +4,34 @@
 }
 
 .dropdown {
-  @apply flex md:hidden;
+  @apply relative;
+  @apply block md:hidden;
+  @apply w-min;
 }
 
 .dropdownBtn {
-  /* @apply ml-auto; */
+  @apply p-2;
+  @apply bg-transparent rounded;
+  @apply text-nowrap;
+  @apply bg-transparent;
+  @apply border-b border-b-[var(--main-color)];
+  @apply shadow-[0px_0px_5px_0px_rgba(15,1,247,0.5)];
+  @apply transition-shadow;
+}
+
+.dropdownBtn:focus, .dropdownBtn:hover {
+  @apply outline-none;
+  @apply shadow-[0px_0px_10px_0px_rgba(15,1,247,0.5)_inset,0px_0px_15px_5px_rgba(15,1,247,0.5)];
 }
 
 .ulCol {
-  @apply flex flex-col;
-  @apply ml-auto;
+  @apply absolute top-10 right-0;
+  @apply flex flex-col gap-2;
+  @apply w-full;
+  @apply p-2;
+  @apply bg-[rgba(15,1,247,0.5)] rounded;
+  @apply shadow-[0px_0px_10px_0px_rgba(15,1,247,0.5)_inset,0px_0px_15px_5px_rgba(15,1,247,0.5)];
+  @apply z-[2];
 }
 
 .btn {

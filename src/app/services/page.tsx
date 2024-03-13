@@ -50,17 +50,20 @@ export default function Services() {
 
   return (
     <Section title="Услуги">
-      <Input
-        onChange={handleSearch}
-        // onBlur={handleBlur}
-        placeholder={'Я ищу...'}
-        type="search"
-        value={search} />
-      <TabBar
-        className={styles.tabbar}
-        list={[...servicesTitles, all]}
-        callback={handleTab}
-        sortType={sortType} />
+      <div className={styles.header}>
+        <Input
+          onChange={handleSearch}
+          // onBlur={handleBlur}
+          placeholder={'Я ищу...'}
+          type="search"
+          value={search} />
+        <TabBar
+          className={styles.tabbar}
+          classNameDropdown={styles.dropdown}
+          list={[...servicesTitles, all]}
+          callback={handleTab}
+          sortType={sortType} />
+      </div>
       {search!?.length === 0 &&
         <ServicesLinkList
           className={styles.ul}

@@ -1,9 +1,13 @@
-/* .ul {
-  @apply grid gap-5;
-  @apply grid-cols-[repeat(auto-fit,minmax(175px,_1fr))];
-  grid-auto-rows: 200px;
-} */
+.header {
+  @apply flex justify-between items-center md:block;
+}
 
 .tabbar {
   @apply mb-5;
+}
+
+.dropdown {
+  @apply inline-block;
+  @apply mb-5;
+  @apply md:hidden;
 }
