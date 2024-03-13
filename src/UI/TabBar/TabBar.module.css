@@ -1,7 +1,19 @@
 .ul {
-  @apply flex justify-center gap-8;
+  @apply hidden md:flex justify-center gap-8;
   @apply w-full;
-  @apply overflow-x-auto;
+}
+
+.dropdown {
+  @apply flex md:hidden;
+}
+
+.dropdownBtn {
+  /* @apply ml-auto; */
+}
+
+.ulCol {
+  @apply flex flex-col;
+  @apply ml-auto;
 }
 
 .btn {
