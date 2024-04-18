@@ -7,7 +7,5 @@ interface IContacts {
 }
 
 export interface FooterProps {
-  services: string[]
-  navigation: string[]
   contacts: IContacts
 }

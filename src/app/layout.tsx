@@ -35,7 +35,7 @@ export default function RootLayout({
             <Breadcrumbs />
             {children}
           </main>
-          <Footer contacts={contacts} navigation={navigationLinks} services={services} />
+          <Footer contacts={contacts} />
         </body>
       </html>
     </ReduxToolkitProvider>
