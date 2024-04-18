@@ -7,8 +7,12 @@
 }
 
 .wrap {
-  @apply w-full h-[300px];
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 grid-flow-row-dense;
+  @apply min-h-[400px]  md:min-h-[600px];
   @apply mb-7;
+}
+
+.imgWrap {
   @apply overflow-hidden;
 }
 
@@ -16,6 +20,7 @@
   @apply w-full h-full object-cover;
   @apply cursor-pointer;
   @apply transition-transform duration-500;
+  @apply rounded;
 }
 
 .img:hover {
@@ -70,12 +75,13 @@
 }
 
 .sliderXLWrap {
-  @apply w-full min-h-[400px] md:min-h-[600px];
+  @apply w-full min-h-[400px] h-auto md:min-h-[600px];
   @apply relative;
 }
 
 .imgXL {
   @apply absolute;
-  
+  @apply object-contain object-center;
+  @apply rounded;
 }
 
