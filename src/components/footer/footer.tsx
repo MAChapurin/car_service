@@ -2,9 +2,9 @@
 
 import Link from 'next/link'
 import { Icon } from '..'
-import { FooterProps } from './footer.props'
+import { FooterProps } from './Footer.props'
 
-import styles from './footer.module.css'
+import styles from './Footer.module.css'
 
 export function Footer({ contacts }: FooterProps) {
   const { address, chart, email, phones } = contacts
