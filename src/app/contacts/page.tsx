@@ -1,10 +1,10 @@
-import { Contacts, Section } from "@/components";
+import { ContactsPage, Section } from "@/components";
 import { contacts } from "@/constants";
 
-export default function ContactsPage() {
+export default function Contacts() {
   return (
     <Section title="Контакты">
-      <Contacts {...contacts} />
+      <ContactsPage {...contacts} />
     </Section>
   )
 }

@@ -1,4 +1,4 @@
-import { Breadcrumbs, Footer, Header } from '@/components'
+import { Breadcrumbs, CallbackModal, Footer, Header } from '@/components'
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
 
@@ -29,6 +29,7 @@ export default function RootLayout({
       <html lang="ru">
         <body className={`relative ${raleWay.className}`}>
           <div id='portal'></div>
+          <CallbackModal />
           <Header />
           <main className={styles.container}>
             <Breadcrumbs />

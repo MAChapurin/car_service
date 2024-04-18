@@ -17,7 +17,7 @@ export default function ServerUploadPage() {
     const path = join(process.cwd(), 'public', 'services', file.name)
     await writeFile(path, buffer)
     console.log(`open ${path} to see the uploaded file`)
-    console.log(process.cwd())
+    // console.log(process.cwd())
 
     return { success: true }
   }

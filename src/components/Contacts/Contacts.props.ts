@@ -10,4 +10,5 @@ export interface ContactsProps {
   email: string;
   address: string;
   chart: string;
+  requisites: string[];
 }

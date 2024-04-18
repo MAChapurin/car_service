@@ -2,17 +2,14 @@ import { Advantages, Article, Contacts, Galery, Hero, Section, ServicesList, Wat
 
 import { advantages, contacts, galeryData, servicesTitles } from "@/constants";
 
-// import styles from './layout.module.css'
 
 export default function Home() {
-  console.log(process.env.pass)
   return (
     <>
       <Hero
         title={'CITY SERVIS AUTOMATIC'}
         description="Безопасность и надежность работы автомобиля"
         buttonContent={'Консультация'}
-      // background={'url(/car-hero-1920.jpg)'}
       />
       <Section title={'О нас'}>
         <Article

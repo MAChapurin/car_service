@@ -1,9 +1,5 @@
 import { Galery, Section } from "@/components";
 
-// import { galeryData } from "@/constants";
-
-import styles from './galery.module.css'
-
 const galeryData: string[] = [
   '/galery/galery-1.jpg',
   '/galery/galery-2.jpg',

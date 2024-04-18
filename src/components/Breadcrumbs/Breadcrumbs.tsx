@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { detailsServices, pathData } from '@/constants'
 
 import styles from './Breadcrumbs.module.css'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 
 const navAnimation = {
   hidden: {
@@ -42,9 +42,9 @@ export function Breadcrumbs() {
   const paths = [...pathData, ...detailsServicesPaths]
   const pathnameSplit = pathname.split('/').slice(1)
 
-  useEffect(()=> {
-    console.log(paths)
-  })
+  // useEffect(()=> {
+  //   console.log(paths)
+  // })
   return (
     <motion.ul
       className={styles.nav}

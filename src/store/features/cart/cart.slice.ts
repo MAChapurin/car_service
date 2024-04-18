@@ -14,10 +14,8 @@ interface ICart {
 
 const keyLS = 'cart'
 
-const cartLS = localStorage?.getItem(keyLS)
-
 const initialState: ICart = {
-  cart: cartLS ? JSON.parse(cartLS) : [],
+  cart: [],
 }
 
 export const counterSlice = createSlice({
