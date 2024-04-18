@@ -1,40 +1,40 @@
-import { NextApiRequest } from 'next'
-import { NextResponse, NextRequest } from 'next/server'
+import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { env } from 'node:process';
 
-// import sendEmail from "@/lib/mail";
-
-export async function POST(request: NextApiRequest) {
-  console.log(request.body)
+export async function POST(req: Request) {
   try {
-    const { subject, message } = request.body;
-
+    const body = await req.json()
+    const { name, phone, message } = body
     const transporter = nodemailer.createTransport(
       {
-        host: 'smtp.yandex.ru',
+        host: 'smtp.mail.ru',
         port: 465,
         secure: true,
         auth: {
-          user: process.env.user,
-          pass: process.env.pass
+          user: env.NEXT_PUBLIC_USER,
+          pass: env.NEXT_PUBLIC_PASSWORD
         },
         tls: { rejectUnauthorized: false }
       },
       {
-        from: 'autoservice csa <m4chapurin@yandex.ru>'
+        from: 'autoservice csa <CSA-test@mail.ru>'
       }
     )
 
     const mailOption = {
-      from: 'm4chapurin@yandex.ru',
-      to: 'machapurin@icloud.com',
-      // to: 'm4chapurin@yandex.ru',
-      subject: 'Send Email Tutorial',
+      from: 'CSA-test@mail.ru',
+      to: ['machapurin@icloud.com'],
+      subject: 'Заявка с сайта автосервиса CSA',
       html: `
-		<h3>Hello Augustine</h3>
-		<li> title: ${subject}</li>
-		<li> message: ${message}</li> 
-		`
+      <div style="height: 500px;background-color: #fff;">
+      <h4 style="margin-bottom: 10px;">Имя клиента:<i> ${name}<i></h4>
+      <i>Телефон: <a href="tel:${phone}">${phone}</a></i>
+      ${message ? `<h4 style="margin-bottom: 10px;"><i>Комментарий к заявке:</i></h4>
+      <br/>
+      <p>${message}</р>` : ''}
+      </div>
+  	`
     }
 
     transporter.sendMail(mailOption)
@@ -51,21 +51,3 @@ export async function POST(request: NextApiRequest) {
   }
 }
 
-// to: 'm4chapurin@yandex.ru',
-// to: 'machapurin@icloud.com',
-// subject: `Письмо с сайта csa от ${req.body?.name}`,
-// subject: `Письмо с сайта  от csa}`,
-// text: 'zloebuchee pismo',
-// from: 'm4chapurin@yandex.ru'
-//  `
-// 	Имя: ${req.body?.name},
-//     	Телефон: ${req.body?.phone},
-//     	E-mail: ${req.body?.email},
-//     	Сообщение: ${req.body?.message},
-// 	`
-
-// await sendEmail(message);
-// console.log(message);
-// res.send(`Спасибо за заявку, ${req.body?.name}!`);
-// return NextResponse.json({ success: true })
-// res.send(`Спасибо за заявку, ${req.body?.name}!`);
