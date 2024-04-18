@@ -1,7 +1,7 @@
 'use client'
 
 import { ModalProps } from "./Modal.props";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { useClickOutside } from "@/hooks/useClickOutside";
@@ -32,10 +32,6 @@ export function Modal({ children, isVisible, onClose }: ModalProps) {
   const contentRef = useRef(null)
 
   useClickOutside(contentRef, onClose)
-
-  useLayoutEffect(()=> {
-    
-  },[])
 
   useEffect(() => {
     const body = document.querySelector('body')

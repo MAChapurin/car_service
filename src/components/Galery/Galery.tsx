@@ -16,7 +16,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import './Galery.css'
-// import 'swiper/swiper-bundle.min.css';
 import styles from './Galery.module.css'
 
 const containerAnimation = {
@@ -197,8 +196,6 @@ export function Galery({ list = [], title = null, isLink = false }: GaleryProps)
                             className={styles.imgXL}
                             src={el}
                             alt={el}
-                            // objectFit='contain'
-                            // objectPosition='center center'
                             fill
                           />
                         </div>

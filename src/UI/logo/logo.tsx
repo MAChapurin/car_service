@@ -1,8 +1,5 @@
 import Link from "next/link";
 
-import { LogoProps } from "./Logo.props";
-
-import cn from 'classnames'
 import styles from './Logo.module.css'
 
 
