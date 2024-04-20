@@ -13,6 +13,7 @@ export type IconType =
   | 'data'
   | 'faq'
   | 'gear'
+  | 'github'
   | 'instagramm'
   | 'pact'
   | 'people'

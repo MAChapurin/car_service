@@ -46,8 +46,8 @@ export function Header() {
             <Link className={styles.phone} href={'tel:+78142332211'}>
               <Icon icon='phone' />
             </Link>
-            <Link href={'/#'}>
-              <Icon icon='account' />
+            <Link target='_blank' href={'https://github.com/MAChapurin/car_service'}>
+             <Icon icon='github'/>
             </Link>
           </div>
         </div>

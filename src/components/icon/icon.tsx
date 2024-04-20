@@ -1,5 +1,5 @@
 import { IconProps } from "./icon.props"
-import { Account, ArrowUp, Badge, Burger, BurgerBtn, CartIcon, Checked, CloseIcon, Confidence, DataIcon, Email, FAQIcon, Gear, Instagramm, Pact, People, Phone, Pin, Telegramm, Time, VK, WhatsUp } from "./icons"
+import { Account, ArrowUp, Badge, Burger, BurgerBtn, CartIcon, Checked, CloseIcon, Confidence, DataIcon, Email, FAQIcon, Gear, GithubIcon, Instagramm, Pact, People, Phone, Pin, Telegramm, Time, VK, WhatsUp } from "./icons"
 
 export function Icon({ icon, ...props }: IconProps) {
   const iconsConfig = {
@@ -16,6 +16,7 @@ export function Icon({ icon, ...props }: IconProps) {
     ['email']: <Email {...props} />,
     ['faq']: <FAQIcon {...props}/>,
     ['gear']: <Gear {...props}/>,
+    ['github']: <GithubIcon {...props}/>,
     ['instagramm']: <Instagramm {...props}/>,
     ['people']: <People {...props} />,
     ['pact']: <Pact {...props}/>,
