@@ -16,6 +16,7 @@
 
 .header__left {
   @apply flex items-center gap-14;
+  @apply mr-1;
 }
 
 .header__nav {
