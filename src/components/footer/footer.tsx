@@ -2,9 +2,20 @@
 
 import Link from 'next/link'
 import { Icon } from '..'
-import { FooterProps } from './footer.props'
 
 import styles from './footer.module.css'
+
+interface IContacts {
+  phones: string[];
+  title: string;
+  email: string;
+  address: string;
+  chart: string;
+}
+
+interface FooterProps {
+  contacts: IContacts
+}
 
 export function Footer({ contacts }: FooterProps) {
   const { address, chart, email, phones } = contacts
