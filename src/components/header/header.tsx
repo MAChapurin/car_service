@@ -9,7 +9,7 @@ import { Logo, ScrollBtn } from '@/UI'
 import { BurgerMenu, Icon } from '@/components'
 
 import cn from 'classnames'
-import styles from './Header.module.css'
+import styles from './header.module.css'
 
 export function Header() {
   const pathname = usePathname()
