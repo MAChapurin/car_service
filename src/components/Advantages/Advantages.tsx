@@ -9,11 +9,11 @@ import styles from './Advantages.module.css'
 
 const itemAnimation = {
   hiddenLeft: {
-    x: -200,
+    x: -100,
     opacity: 0
   },
   hiddenRight: {
-    x: 200,
+    x: 100,
     opacity: 0
   },
   visible: {
