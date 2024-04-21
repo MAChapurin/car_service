@@ -31,7 +31,7 @@ export const Contacts = ({ address, chart, coords, email, title, phones }: Conta
           <Map
             width="100%"
             height="100%"
-            state={{ center: [lat, lon], zoom: 9, behaviors: ['drag'] }}
+            state={{ center: [lat, lon], zoom: 18, behaviors: ['drag'] }}
             defaultState={{ center: [lat, lon], zoom: 9 }}
           >
             <ZoomControl options={{ position: { right: '10px' }, size: 'auto' }} />
