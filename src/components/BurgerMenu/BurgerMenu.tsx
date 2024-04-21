@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from 'framer-motion'
 
 import cn from 'classnames'
@@ -7,6 +7,7 @@ import styles from './BurgerMenu.module.css'
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Icon } from ".."
+import { useClickOutside } from "@/hooks"
 
 const burgerAnimation = {
   hidden: {
@@ -43,8 +44,14 @@ export function BurgerMenu() {
   const pathname = usePathname()
   const [isVisible, setVisible] = useState<boolean>(false)
 
+const ref = useRef<HTMLDivElement>(null)
+const path = usePathname()
 
+useClickOutside(ref, ()=> setVisible(false))
 
+useEffect(()=> {
+  setVisible(false)
+},[path])
   useEffect(() => {
     const body = document.querySelector('body')
     if (body) {
@@ -94,6 +101,7 @@ export function BurgerMenu() {
             whileInView={burgerAnimation.visible}
             exit={burgerAnimation.hidden}
             viewport={{ once: true }}
+            ref={ref}
           >
             <motion.nav
               className={styles.nav}
