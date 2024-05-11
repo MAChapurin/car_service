@@ -24,9 +24,42 @@
   @apply border rounded-2xl border-[var(--main-color)];
 }
 
-.description {
-  @apply whitespace-pre text-wrap;
+.description h2 {
+  @apply text-center;
+  @apply mb-4;
 }
+
+.description h3 {
+  @apply text-center;
+  @apply mb-3;
+}
+
+.description h4 {
+  @apply mb-2;
+  @apply text-left;
+}
+
+.description p {
+  @apply mb-3;
+}
+
+.description ul {
+  @apply mb-4;
+  @apply pl-4;
+  @apply list-disc;
+}
+
+.description ol {
+  @apply mb-4;
+  @apply pl-4;
+  @apply list-decimal;
+}
+
+.description ol li {
+  @apply list-item;
+}
+
+
 
 .links {
   @apply flex flex-wrap justify-center gap-5;

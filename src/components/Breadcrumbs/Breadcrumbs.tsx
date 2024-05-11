@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { detailsServices, pathData } from '@/constants'
 
 import styles from './Breadcrumbs.module.css'
+import { useRef } from 'react'
 // import { useEffect } from 'react'
 
 const navAnimation = {
@@ -33,6 +34,7 @@ const linkAnimation = {
 
 export function Breadcrumbs() {
   const pathname = usePathname()
+  const ref = useRef<HTMLUListElement>(null)
   const detailsServicesPaths = detailsServices.map(({id, title})=> {
     return {
       title,
@@ -42,9 +44,6 @@ export function Breadcrumbs() {
   const paths = [...pathData, ...detailsServicesPaths]
   const pathnameSplit = pathname.split('/').slice(1)
 
-  // useEffect(()=> {
-  //   console.log(paths)
-  // })
   return (
     <motion.ul
       className={styles.nav}
@@ -52,6 +51,7 @@ export function Breadcrumbs() {
       whileInView={navAnimation.visible}
       exit={navAnimation.hidden}
       viewport={{ once: true }}
+      ref={ref}
     >
       <li>
         <Link
@@ -73,7 +73,8 @@ export function Breadcrumbs() {
               <Link
                 className={styles.link}
                 href={path}>
-                ▸ {title}
+                <span>▸</span>
+                <span>{title}</span>
               </Link>
             </motion.li>
           </AnimatePresence>

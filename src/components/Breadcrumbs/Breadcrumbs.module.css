@@ -1,6 +1,7 @@
 .nav {
   @apply fixed top-[55px] md:top-[89px] lg:top-[123px];
-  @apply flex gap-2;
+  @apply flex flex-wrap gap-2;
+  @apply max-w-[calc(100%-40px)];
   @apply p-2 rounded-b-md;
   @apply z-10;
   @apply bg-[var(--background-support-color)];
@@ -8,7 +9,12 @@
 }
 
 .link {
+  @apply flex flex-nowrap gap-1;
   @apply font-medium text-xs md:text-lg text-[var(--text-gray)];
   @apply transition-colors ease-in-out;
   @apply hover:text-[var(--main-color)];
+}
+
+.link span {
+  @apply inline-block;
 }

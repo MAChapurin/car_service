@@ -96,15 +96,18 @@ export default function DetailServicePage({ params }: { params: { id: string } }
             height={400}
           />
         </motion.div>
-        <motion.p
+        <motion.div
           className={styles.description}
           initial={textAnimation.hidden}
           whileInView={textAnimation.visible}
           exit={textAnimation.hidden}
           transition={{ duration: 0.3 }}
         >
-          {description}
-        </motion.p>
+          {/* {description} */}
+          <div
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
+        </motion.div>
       </div>
       <div className={styles.links}>
         <Button
